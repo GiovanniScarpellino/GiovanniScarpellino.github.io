@@ -1,0 +1,145 @@
+@import "../../antd-custom.less";
+@bubble-open-chat-size: 75px;
+@icon-open-chat-size: 35px;
+@bottom-bubble-open-chat: 15px;
+#chat {
+    .button-open-chat {
+        position: fixed;
+        cursor: pointer;
+        right: 15px;
+        bottom: @bottom-bubble-open-chat;
+        z-index: 100;
+        height: @bubble-open-chat-size;
+        width: @bubble-open-chat-size;
+        border-radius: 50%;
+        background: @primary-color;
+        .message-icon {
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            font-size: @icon-open-chat-size;
+            color: white;
+        }
+    }
+    @border-radius-body: 15px;
+    @body-height: 500px;
+    @header-height: 75px;
+    @content-height: 380px;
+    @send-message-height: calc(@body-height - (@header-height + @content-height));
+    .body {
+        overflow: hidden;
+        transition: height 0.7s ease-in-out;
+        border-radius: @border-radius-body;
+        position: fixed;
+        bottom: calc(@bubble-open-chat-size + @bottom-bubble-open-chat + 5px);
+        right: 15px;
+        height: @body-height;
+        max-height: @body-height;
+        width: 350px;
+        background: white;
+        z-index: 100;
+        -webkit-box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.75);
+        &-mobile {
+            width: 60%;
+            bottom: 100px;
+        }
+        .header {
+            position: relative;
+            border-top-left-radius: @border-radius-body;
+            border-top-right-radius: @border-radius-body;
+            border-bottom: 2px solid #1271c9;
+            height: @header-height;
+            background: @primary-color;
+            text-align: center;
+            vertical-align: middle;
+            .text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                transform: translate(-50%, -50%);
+                color: white;
+            }
+        }
+        .input-message{
+            position: absolute;
+            top: @header-height;
+            z-index: 2;
+            left: 0;
+            width: 100%;
+            background: #116dc1;
+            padding: 15px;
+        }
+        .content {
+            height: @content-height;
+            overflow: auto;
+            width: 100%;
+            background: white;
+            padding: 10px;
+            .alert-login {
+                margin: 15px;
+            }
+            .bubble {
+                position: relative;
+                width: 240px;
+                padding: 10px;
+                margin: 5px;
+                background: @primary-color;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                p {
+                    color: white;
+                    margin-bottom: 0;
+                }
+                &-left {
+                    float: left;
+                    background: #E7E7E7;
+                    p {
+                        color: black
+                    }
+                }
+                &-right {
+                    float: right;
+                }
+            }
+        }
+        .send-message {
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+            border-bottom-left-radius: @border-radius-body;
+            border-bottom-right-radius: @border-radius-body;
+            border-bottom: 2px solid #C6C6C6;
+            background: #E7E7E7;
+            &-mobile {
+                bottom: unset;
+            }
+            .input {
+                margin-left: 5px;
+                margin-top: 5px;
+                background: #E7E7E7;
+                border: 0;
+                width: calc(100% - 55px);
+                resize: none;
+            }
+            .input::placeholder {
+                color: #999999;
+            }
+            .send-icon {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                transform: translateY(-50%);
+                height: 30px;
+                font-size: 30px;
+            }
+        }
+    }
+}
