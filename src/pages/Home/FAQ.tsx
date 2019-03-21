@@ -85,7 +85,7 @@ class FAQ extends React.PureComponent<IProps, IState> {
                                 <h3>Posez moi votre question!</h3>
                                 <Form onSubmit={this.handleSubmit}>
                                     <Row gutter={16}>
-                                        <Col span={10}>
+                                        <Col xs={24} md={10}>
                                             <Form.Item label="La question">
                                                 {getFieldDecorator('question', {
                                                     rules: [{ required: true, message: "Ce champs est requis!" }]
@@ -94,14 +94,14 @@ class FAQ extends React.PureComponent<IProps, IState> {
                                                 )}
                                             </Form.Item>
                                         </Col>
-                                        <Col span={10}>
-                                            <Form.Item label="Email pour être tenu au courant de la réponse">
+                                        <Col xs={24} md={10}>
+                                            <Form.Item label={"Email pour être tenu au courant de la réponse"}>
                                                 {getFieldDecorator('email')(
                                                     <Input placeholder="scarpellino.giovanni@gmail.com" />
                                                 )}
                                             </Form.Item>
                                         </Col>
-                                        <Col span={4}>
+                                        <Col xs={24} md={4}>
                                             <Form.Item label=" " colon={false}>
                                                 <Button htmlType="submit" type="primary" block loading={this.state.loading}>Envoyer</Button>
                                             </Form.Item>

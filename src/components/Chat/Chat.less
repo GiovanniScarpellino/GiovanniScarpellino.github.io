@@ -43,7 +43,10 @@
         -moz-box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.75);
         box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.75);
         &-mobile {
-            width: 60%;
+            width: 95%;
+            @body-height: 65vh;
+            overflow: hidden;
+            max-height: @body-height;
             bottom: 100px;
         }
         .header {
@@ -117,9 +120,6 @@
             border-bottom-right-radius: @border-radius-body;
             border-bottom: 2px solid #C6C6C6;
             background: #E7E7E7;
-            &-mobile {
-                bottom: unset;
-            }
             .input {
                 margin-left: 5px;
                 margin-top: 5px;
