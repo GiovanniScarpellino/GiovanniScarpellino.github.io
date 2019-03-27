@@ -3,6 +3,11 @@ import './index.less';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// Google Analytics
+import ReactGA from 'react-ga';
+ReactGA.initialize(TRACKING_CODE);
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 // React & Redux
 import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 import * as Firebase from 'firebase/app';
@@ -11,6 +16,7 @@ import * as Constants from './constants/env';
 // Pages
 import Home from './pages/Home/Home';
 import { notification, Button } from 'antd';
+import { TRACKING_CODE } from './constants';
 
 interface IProps { }
 
