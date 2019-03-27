@@ -77,7 +77,7 @@ Voici votre message précédent: ${req.body.lastMessage}<br/>
 Voici ma réponse: ${req.body.content}<br/><br/>
 
 Je vous remercie de m'avoir contacté! <br/>
-Vous pouvez <a href='https://giovanniscarpellino.github.io'>cliquez-ici</a> pour visitez mon site web!
+Vous pouvez <a href='https://giovanniscarpellino.github.io'>cliquez-ici</a> pour visiter mon site web!
 <br/><br/>
 Cordialement,<br/>
 SCARPELLINO Giovanni`,
@@ -142,7 +142,7 @@ export const answerQuestion = functions.https.onRequest((req, res) => {
         if (!req.body.id || !req.body.response || !req.body.question || req.body.visibleOnWeb === null) {
             throw new functions.https.HttpsError('invalid-argument', "Id, response, question and visibleOnWeb needs to be sent.");
         }
-        await admin.database().ref('/faq/' + req.body.id).set({
+        await admin.database().ref('/faq/' + req.body.id).update({
             email: req.body.email,
             question: req.body.question,
             response: req.body.response,
@@ -160,7 +160,7 @@ Voici ma réponse: ${req.body.response}<br/><br/>
 
 Je vous remercie de m'avoir contacté! <br/>
 ${req.body.visibleOnWeb ? `Vous pourrez voir votre question dans la FAQ de <a href='https://giovanniscarpellino.github.io'>mon site internet.</a>` :
-                            `Vous pouvez <a href='https://giovanniscarpellino.github.io'>cliquez-ici</a> pour visitez mon site web!`}
+                            `Vous pouvez <a href='https://giovanniscarpellino.github.io'>cliquez-ici</a> pour visiter mon site web!`}
 <br/><br/>
 Cordialement,<br/>
 SCARPELLINO Giovanni`,
