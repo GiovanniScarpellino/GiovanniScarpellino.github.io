@@ -1,0 +1,51 @@
+{
+    "id": 27,
+    "teamId": 9,
+    "players": 3,
+    "createdAt": "2020-11-17T13:44:22.638Z",
+    "preparedAt": "2020-11-17T13:44:25.452Z",
+    "startedAt": "2020-11-17T13:45:05.232Z",
+    "completedAt": null,
+    "difficulty": "hard",
+    "language": "fr",
+    "score": 0,
+    "challengeCount": 1,
+    "challengeIndex": 0,
+    "badgeId": "N1",
+    "tripId": 2,
+    "startTimeSlot": "14:45",
+    "challenges": [
+        {
+            "id": 6,
+            "moduleId": "HAB-QBTC-01",
+            "name": "Chasse aux symboles",
+            "code": "C",
+            "parameters": "",
+            "descriptionFr": null,
+            "descriptionEn": null,
+            "position": 1,
+            "score": 0,
+            "settings": {
+                
+            },
+            "levels": [
+                {
+                    "level": "medium",
+                    "challengeId": 6,
+                    "rules": "Vous allez affronter *2 modes de jeu* :\n\n * MODE 1\nAppuyez sur les boutons dès qu’ils s'allument et avant qu'ils ne s'éteignent !\n\n * MODE 2\nAppuyez sur le ou les bouton(s) de la ou des couleur(s) correspondant à celle(s) affichée(s) sur le puits central. Attention, les boutons s'allument d’une couleur différente à chaque itération !\n\nVous changer de mode de jeu à chaque fois que vous entendrez un signal sonore et que tous les boutons passeront en bleu avant de s'éteindre.",
+                    "pointsWin": 10,
+                    "pointsLose": 5,
+											"answerTime": 2000
+                }
+            ]
+        }
+    ],
+    "team": {
+        "id": 9,
+        "name": "",
+        "players": 3,
+        "email": "tests@habilebill.fr",
+        "language": "fr"
+    },
+    "isOnFinalChallenge": false
+}
