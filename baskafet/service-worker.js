@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.b5ef93ed4b1d2dc7c15de50ce92996f7.js"
+  "/baskafet/precache-manifest.d06e99064bb7c82c44d78b2fc1f82771.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "bask-afet"});
