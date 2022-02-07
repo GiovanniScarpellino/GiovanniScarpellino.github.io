@@ -1,0 +1,198 @@
+body{
+    --main-bg-color: rgb(231, 231, 231);
+    --main-bg-color-dark: rgb(26, 51, 69);
+    --text-color: rgb(74, 74, 74);
+    --circle-not-active: rgb(193, 193, 193);
+    --divider: rgb(150, 150, 150);
+    
+    margin: 0px;
+    background: var(--circle-not-active);
+    font-family: 'Roboto', sans-serif;
+}
+
+@media not print {
+    @media (max-width: 700px) { 
+        body #giovanniscarpellino-cv .container{
+            display: block;
+        }
+    
+        body #giovanniscarpellino-cv .container .left{
+            position: relative;
+            width: calc(100% - 80px);
+        }
+    
+        body #giovanniscarpellino-cv .container .left::after{
+            content: '';
+            height: 1px;
+            width: 80%;
+            right: 10%;
+            position: absolute;
+            top: 102%;
+            background-color: var(--divider);
+        }
+    
+        body #giovanniscarpellino-cv .container .right{
+            width: calc(100% - 80px);
+        }
+    }
+    
+    @media (max-width: 720px) { 
+        body #giovanniscarpellino-cv header .title .sub-title{
+            text-align: center;
+            bottom: -1.7em;
+        }
+    }
+}
+
+
+#giovanniscarpellino-cv {
+    max-width: 1020px;
+    margin: auto;
+    overflow: scroll;
+}
+
+#giovanniscarpellino-cv a{
+    color: var(--text-color);
+}
+
+#giovanniscarpellino-cv a:hover{
+    font-weight: bold;
+}
+
+#giovanniscarpellino-cv ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+#giovanniscarpellino-cv ul li{
+    list-style: none;
+}
+
+#giovanniscarpellino-cv .skills{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#giovanniscarpellino-cv .skills .skill{
+    display: inline-block;
+}
+
+#giovanniscarpellino-cv .skills .skill span{
+    display: inline-block;
+    width: 75px;
+    overflow: hidden;
+}
+
+#giovanniscarpellino-cv .skills .skill .circles{
+    display: inline-block;
+}
+
+#giovanniscarpellino-cv .skills .skill .circles .circle{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: var(--circle-not-active);
+}
+
+#giovanniscarpellino-cv .skills .skill .circles .circle.active{
+    background: var(--main-bg-color-dark);
+}
+
+
+#giovanniscarpellino-cv .skills  ul li{
+    list-style: disc;
+    margin-left: 15px;
+}
+
+#giovanniscarpellino-cv h2{
+    text-transform: uppercase;
+    color: var(--main-bg-color-dark);
+    margin-bottom: 5px;
+}
+
+#giovanniscarpellino-cv h3{
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+#giovanniscarpellino-cv p{
+    margin-top: 0px;
+    color: var(--text-color);
+}
+
+#giovanniscarpellino-cv header{
+    background: var(--main-bg-color-dark);
+    color: white;
+    padding: 30px;
+}
+
+#giovanniscarpellino-cv header .title{
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+}
+
+#giovanniscarpellino-cv header .title h1{
+    text-transform: uppercase;
+    border: 5px solid white;
+    font-weight: bold;
+    padding: 50px;
+    font-size: 3em;
+    text-align: center;
+}
+
+#giovanniscarpellino-cv header .title .sub-title{
+    font-size: 1.3em;
+    font-weight: bold;
+    position: absolute;
+    bottom: -1em;
+    text-transform: uppercase;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: var(--main-bg-color-dark);
+    display: inline-block;
+    padding: 15px 50px;
+}
+
+#giovanniscarpellino-cv .container{
+    background: var(--main-bg-color);
+    display: grid;
+    grid-template-columns: repeat(1fr, 3);
+    grid-template-rows: repeat(1fr, 4);
+    gap: 0px 0px;
+    grid-template-areas: 
+        "left right"
+    ;
+}
+
+#giovanniscarpellino-cv .container .left{
+    position: relative;
+    grid-area: left;
+    padding: 20px 40px;
+    width: 7cm;
+}
+
+#giovanniscarpellino-cv .container .left::after{
+    content: '';
+    height: 90%;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 5%;
+    background-color: var(--divider);
+}
+
+#giovanniscarpellino-cv .container .right{
+    grid-area: right;
+    padding: 20px 40px;
+}
+
+#giovanniscarpellino-cv .experiences ul li ul li{
+    list-style: disc;
+    margin-left: 15px;
+}
