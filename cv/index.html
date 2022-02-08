@@ -13,377 +13,351 @@
 </head>
 
 <body>
-    <div id="giovanniscarpellino-cv">
-        <header>
-            <div class="title">
-                <h1>Giovanni SCARPELLINO</h1>
-                <span class="sub-title">Développeur - <span id="age">--</span> ans</span>
-            </div>
-        </header>
+    <div id="app">
+        <div id="languages">
+            <img src="assets/images/france.png" v-if="$i18n.locale === 'en-US'" @click="$i18n.locale = 'fr-FR'" width="50" height="33" alt="France">
+            <img src="assets/images/english.png" v-if="$i18n.locale === 'fr-FR'" @click="$i18n.locale = 'en-US'" width="50" height="33" alt="English">
+        </div>
 
-        <div class="container">
-            <div class="left">
-                <div class="item">
-                    <h2>Profil</h2>
-                    <p>
-                        Dévelopeur informatique motivioné, polyvalent et autodidacte.
-                        La découverte et l'innovation me passionnent.
-                        J'aime relever des défis et répondre aux problématiques de demain.
-                    </p>
+        <div id="giovanniscarpellino-cv">
+            <header>
+                <div class="title">
+                    <h1>Giovanni SCARPELLINO</h1>
+                    <span class="sub-title">{{ $t('developper') }} - <span> {{ age }} </span> {{ $t('years') }}</span>
                 </div>
-
-                <div class="item">
-                    <h2>Formations</h2>
-
-                    <div>
-                        <h3>IUT Belfort Montbéliard</h3>
+            </header>
+    
+            <div class="container">
+                <div class="left">
+                    <div class="item">
+                        <h2>Profil</h2>
                         <p>
-                            DUT Informatique
-                            2016-2018
+                            {{ $t('profil') }}
                         </p>
                     </div>
-
-                    <div>
-                        <h3>CEGEP Matane, CANADA</h3>
-                        <p>
-                            DUT Informatique
-                            2016-2018
-                        </p>
+    
+                    <div class="item">
+                        <h2>{{ $t('education') }}</h2>
+    
+                        <div>
+                            <h3>IUT Belfort Montbéliard</h3>
+                            <p>
+                                DUT Informatique
+                                2016-2018
+                            </p>
+                        </div>
+    
+                        <div>
+                            <h3>CEGEP Matane, CANADA</h3>
+                            <p>
+                                DUT Informatique
+                                2016-2018
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="item">
+                        <h2>Contact</h2>
+    
+                        <div>
+                            <h3>{{ $t('phone') }}</h3>
+                            <p>
+                                <a href="tel:+33777059145"> 07 77 05 91 45 </a>
+                            </p>
+                        </div>
+    
+                        <div>
+                            <h3>E-mail</h3>
+                            <p>
+                                <a href="mailto:scarpellino.giovanni@gmail.com"> scarpellino.giovanni@gmail.com </a>
+                            </p>
+                        </div>
+    
+                        <div>
+                            <h3>{{ $t('website') }}</h3>
+                            <p>
+                                <a target="_blank" href="https://scarpellino.eu"> scarpellino.eu </a>
+                            </p>
+                        </div>
+    
+                        <div class="linkedin">
+                            <h3>Linkedin</h3>
+                            <p>
+                                <a target="_blank" href="https://www.linkedin.com/in/giovanni-scarpellino-900587183/"> {{ $t('linkedin') }} </a>
+                            </p>
+                        </div>
+    
+                        <div>
+                            <h3>{{ $t('address') }} </h3>
+                            <p> 140B rue de belfort, 68200 Mulhouse </p>
+                        </div>
+    
+                        <!-- <small>Possesseur du permis B</small> -->
                     </div>
                 </div>
-
-                <div class="item">
-                    <h2>Contact</h2>
-
+    
+                <div class="right">
+                    <div class="experiences">
+                        <h2>{{ $t('projects') }}</h2>
+                        <ul class="content">
+                            <li>
+                                <ul>
+                                    <h3>
+                                        <a target="_blank" href="https://www.youtube.com/watch?v=6KKGnPRS_7w"> {{ $t('dut') }}</a>
+                                        <small>( {{ $t('april') }} - {{ $t('july') }} 2018 )</small>
+                                    </h3>
+    
+                                    <li>
+                                        {{ $t('dut_list_1') }}
+                                    </li>
+                                    <li>
+                                        {{ $t('dut_list_2') }}
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <h3>
+                                        <a target="_blank" href="https://syncodeo.io">Syncodeo.io</a>
+                                        <small>( {{ $t('october') }} 2018 - {{ $t('march') }} 2019 )</small>
+                                    </h3>
+    
+                                    <li>
+                                        {{ $t('syncodeo') }}
+                                        <br>
+                                        ⚙️ React + Ant Design + Hapi + Elasticsearch + Redis
+                                    </li>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <ul>
+                                    <h3>
+                                        <a target="_blank" href="https://zestfully.co">Zestfully</a>
+                                        <small>( 2019 - {{ new Date().getFullYear() }}+ )</small>
+                                    </h3>
+    
+                                    <li>
+                                        {{ $t('zestfully') }}
+                                        <br>
+                                        ⚙️ Elasticsearch + Nuxt + Express + Postgres
+                                    </li>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <ul>
+                                    <h3>
+                                        <a target="_blank" href="https://bretzel.games/">Bretzel games</a>
+                                        <small>( 2019 - {{ new Date().getFullYear() }}+ )</small>
+                                    </h3>
+    
+                                    <li>
+                                        {{ $t('bretzel_games') }}
+                                        <br>
+                                        ⚙️ NodeJS + Socket.io + VueJS
+                                    </li>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <ul>
+                                    <h3>
+                                        <a target="_blank" href="https://www.youtube.com/watch?v=irUHvsfppvU"> {{ $t('unity_video_game') }} </a>
+                                        <small>( 2017 )</small>
+                                    </h3>
+    
+                                    <li>
+                                        {{ $t('unity') }}
+                                        <br>
+                                        ⚙️ Unity + C#
+                                    </li>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <ul>
+                                    <h3>
+                                        <a target="_blank" href="https://www.youtube.com/watch?v=7h78NaebtZ8">{{ $t('app_qrun') }}</a>  
+                                        <small>( 2017 )</small>
+                                    </h3>
+    
+                                    <li>
+                                        {{ $t('qrun') }}
+                                        <br>
+                                        ⚙️ Java + Android Studio + OpenGL
+                                    </li>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <ul>
+                                    <h3>
+                                        {{ $t('flutter_messages') }}
+                                        <small>( 2022 )</small>
+                                    </h3>
+    
+                                    <li>
+                                        {{ $t('flutter') }} <a target="_blank" href="https://scarpellino.eu">scarpellino.eu</a>.
+                                        <br>
+                                        ⚙️ Flutter + Express + Socket.io
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                        </ul>
+                    </div>
+    
+    
                     <div>
-                        <h3>Téléphone</h3>
-                        <p>
-                            <a href="tel:+33777059145"> 07 77 05 91 45 </a>
-                        </p>
+                        <h2>{{ $t('languages') }}</h2>
+                        <ul class="skills">
+                            <li class="skill">
+                                <span>{{ $t('english') }}</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-
+    
                     <div>
-                        <h3>Email</h3>
-                        <p>
-                            <a href="mailto:scarpellino.giovanni@gmail.com"> scarpellino.giovanni@gmail.com </a>
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3>Site web</h3>
-                        <p>
-                            <a target="_blank" href="https://scarpellino.eu"> scarpellino.eu </a>
-                        </p>
-                    </div>
-
-                    <div class="linkedin">
-                        <h3>Linkedin</h3>
-                        <p>
-                            <a target="_blank" href="https://www.linkedin.com/in/giovanni-scarpellino-900587183/">Se
-                                rendre sur mon linkedin </a>
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3>Adresse</h3>
-                        <p> 140B rue de belfort, 68200 Mulhouse </p>
-                    </div>
-
-                    <small>Possesseur du permis B</small>
-                </div>
-            </div>
-
-            <div class="right">
-                <div class="experiences">
-                    <h2>Expérences</h2>
-                    <ul class="content">
-                        <li>
-                            <ul>
-                                <h3>
-                                    <a target="_blank" href="https://www.youtube.com/watch?v=6KKGnPRS_7w">Stage de fin
-                                        de DUT Informatique (ESDI - Belfort)</a>
-                                </h3>
-                                <small>( Avril 2018 - Juin 2018 ) + Job d'été (Juillet 2018)</small>
-
-                                <li>
-                                    Création d'une application interactive sous Unity affichant en temps réel les
-                                    informations
-                                    des employés de l'entreprise dans un environnement 3D.
-                                </li>
-                                <li>
-                                    Possibilité d'interaction avec une application Android.
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <ul>
-                                <h3><a target="_blank" href="https://syncodeo.io">Syncodeo.io</a></h3>
-                                <small>( Octobre 2018 - Mars 2019 )</small>
-
-                                <li>
-                                    Plateforme web permettant de regrouper code et vidéo dans une même plateforme dans
-                                    le but de rendre
-                                    l'apprentissage du code plus accessible.
-                                    <br>
-                                    ⚙️ React + Ant Design + Hapi + Elasticsearch + Redis
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <ul>
-                                <h3><a target="_blank" href="https://zestfully.co">Zestfully</a></h3>
-                                <small>( A renseigner )</small>
-
-                                <li>
-                                    Guide des meilleurs restaurants pour toutes les occasions. Premièrement à Londres,
-                                    puis à travers le monde!
-                                    <br>
-                                    ⚙️ Elasticsearch + Nuxt + Express + Postgres
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <ul>
-                                <h3><a target="_blank" href="https://paper-pwr.ams.v6.pressero.com/">Paper power</a>
-                                </h3>
-                                <small>( A renseigner )</small>
-
-                                <li>
-                                    Site web avec le CRM Pressero qui permet d'avoir des faires parts et autres
-                                    imprimables.
-                                    <br>
-                                    ⚙️ Pressero + HTML + CSS + Javascript
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <ul>
-                                <h3><a target="_blank" href="https://bretzel.games/">Bretzel games</a></h3>
-                                <small>( A renseigner )</small>
-
-                                <li>
-                                    Plusieurs jeux de plateau refait en web et en temps réel.
-                                    <br>
-                                    ⚙️ NodeJS + Socket.io + VueJS
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <ul>
-                                <h3>
-                                    Création de plusieurs <a href="https://bretzel.games/">mini-jeux</a> pour <a target="_blank" href="https://www.neoquests.fr"> Neoquests </a>
-                                </h3>
-                                <small>( A renseigner )</small>
-
-                                <li>
-                                    Plusieurs jeux de plateau refait en web et en temps réel.
-                                    <br>
-                                    ⚙️ NodeJS + Socket.io + VueJS
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <ul>
-                                <h3>
-                                    Création d'un <a target="_blank" href="https://www.youtube.com/watch?v=irUHvsfppvU">jeu vidéo avec Unity</a> 
-                                </h3>
-                                <small>( A renseigner )</small>
-
-                                <li>
-                                    Jeu vidéo avec du Pathfinding pour déplacement de personnes.
-                                    <br>
-                                    ⚙️ Unity + C#
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <ul>
-                                <h3>
-                                    Création d'une <a target="_blank" href="https://www.youtube.com/watch?v=7h78NaebtZ8">Application mobile (QRun)</a> 
-                                </h3>
-                                <small>( A renseigner )</small>
-
-                                <li>
-                                    Application de chasse au trésor. L'utilisateur scanne un QR code et l'application lui donne un indice et indique à combien
-                                    de mètre est l'objet à récupérer.
-                                    <br>
-                                    ⚙️ Java + Android Studio + OpenGL
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <ul>
-                                <h3>
-                                    Application Flutter de messagerie
-                                </h3>
-
-                                <li>
-                                    Application mobile permettant de répondre aux personnes qui envoient un message sur <a target="_blank" href="https://scarpellino.eu">scarpellino.eu</a>.
-                                    <br>
-                                    ⚙️ Flutter + Express + Socket.io
-                                </li>
-                            </ul>
-                        </li>
-                        
-                    </ul>
-                </div>
-
-
-                <div>
-                    <h2>Langues</h2>
-                    <ul class="skills">
-                        <li class="skill">
-                            <span>Anglais</span>
-                            <div class="circles">
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle"></span>
+                        <h2> {{ $t('skills') }} </h2>
+                        <div class="skills">
+                            <div class="skill">
+                                <span>React</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                </div>
                             </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h2>Compétences</h2>
-                    <div class="skills">
-                        <div class="skill">
-                            <span>React</span>
-                            <div class="circles">
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle"></span>
+    
+                            <div class="skill">
+                                <span>NodeJS</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="skill">
-                            <span>NodeJS</span>
-                            <div class="circles">
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle"></span>
+    
+                            <div class="skill">
+                                <span>PHP</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                    <span class="circle"></span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="skill">
-                            <span>PHP</span>
-                            <div class="circles">
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle"></span>
-                                <span class="circle"></span>
+    
+                            <div class="skill">
+                                <span>Git</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                    <span class="circle"></span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="skill">
-                            <span>Git</span>
-                            <div class="circles">
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle"></span>
-                                <span class="circle"></span>
+    
+                            <div class="skill">
+                                <span>Android</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                    <span class="circle"></span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="skill">
-                            <span>Android</span>
-                            <div class="circles">
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle"></span>
-                                <span class="circle"></span>
+    
+                            <div class="skill">
+                                <span>Python</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                    <span class="circle"></span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="skill">
-                            <span>Python</span>
-                            <div class="circles">
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle"></span>
-                                <span class="circle"></span>
+    
+                            <div class="skill">
+                                <span>Java</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                    <span class="circle"></span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="skill">
-                            <span>Java</span>
-                            <div class="circles">
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle"></span>
-                                <span class="circle"></span>
+    
+                            <div class="skill">
+                                <span>Linux</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                    <span class="circle"></span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="skill">
-                            <span>Linux</span>
-                            <div class="circles">
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle"></span>
-                                <span class="circle"></span>
+    
+                            <div class="skill">
+                                <span>C#</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                    <span class="circle"></span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="skill">
-                            <span>C#</span>
-                            <div class="circles">
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle"></span>
-                                <span class="circle"></span>
+    
+                            <div class="skill">
+                                <span>Flutter</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                    <span class="circle"></span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="skill">
-                            <span>Flutter</span>
-                            <div class="circles">
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle"></span>
-                                <span class="circle"></span>
+    
+                            <div class="skill">
+                                <span>MySQL</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                    <span class="circle"></span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="skill">
-                            <span>MySQL</span>
-                            <div class="circles">
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle"></span>
-                                <span class="circle"></span>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <span>Unity</span>
-                            <div class="circles">
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle active"></span>
-                                <span class="circle"></span>
-                                <span class="circle"></span>
+    
+                            <div class="skill">
+                                <span>Unity</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                    <span class="circle"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -392,6 +366,8 @@
         </div>
     </div>
 
+    <script src="assets/js/vue.min.js"></script>
+    <script src="assets/js/vue-i18n.js"></script>
     <script src="assets/js/cv.js"></script>
 
 </body>

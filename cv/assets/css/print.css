@@ -11,6 +11,10 @@ body {
     }
 }
 
+#languages{
+    display: none;
+}
+
 #giovanniscarpellino-cv {
     max-height: 297mm;
     max-width: 210mm;
