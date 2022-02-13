@@ -42,17 +42,28 @@
                         <div>
                             <h3>IUT Belfort Montbéliard</h3>
                             <p>
-                                DUT Informatique
-                                2016-2018
+                                🇫🇷 Belfort, 2016-2018 <br>
+                                🇨🇦 Matane, {{ $t('august') + ' - ' + $t('december') }} 2017 <br>
                             </p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <h2>{{ $t('experiences') }}</h2>
+
+                        <div>
+                            <h3>Syncodeo association</h3>
+                            <p>🏴󠁧󠁢󠁥󠁮󠁧󠁿 Heywards Heath, {{ $t('october') }} 2018 - {{ $t('march') }} 2019 </p>
+                        </div>
+
+                        <div>
+                            <h3>Reymann</h3>
+                            <p>🇫🇷 Illkirch, 2019+</p>
                         </div>
     
                         <div>
-                            <h3>CEGEP Matane, CANADA</h3>
-                            <p>
-                                DUT Informatique
-                                2016-2018
-                            </p>
+                            <h3>{{ $t('self-employed') }}</h3>
+                            <p>🇫🇷 Illkirch, 2019+</p>
                         </div>
                     </div>
     
@@ -89,7 +100,7 @@
     
                         <div>
                             <h3>{{ $t('address') }} </h3>
-                            <p> 140B rue de belfort, 68200 Mulhouse </p>
+                            <p> 🇫🇷 44 route de Lyon, 67400 Illkirch </p>
                         </div>
     
                         <!-- <small>Possesseur du permis B</small> -->
@@ -144,22 +155,7 @@
                                     </li>
                                 </ul>
                             </li>
-    
-                            <li>
-                                <ul>
-                                    <h3>
-                                        <a target="_blank" href="https://bretzel.games/">Bretzel games</a>
-                                        <small>( 2019 - {{ new Date().getFullYear() }}+ )</small>
-                                    </h3>
-    
-                                    <li>
-                                        {{ $t('bretzel_games') }}
-                                        <br>
-                                        ⚙️ NodeJS + Socket.io + VueJS
-                                    </li>
-                                </ul>
-                            </li>
-    
+
                             <li>
                                 <ul>
                                     <h3>
@@ -171,6 +167,44 @@
                                         {{ $t('unity') }}
                                         <br>
                                         ⚙️ Unity + C#
+                                    </li>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <ul>
+                                    <h3>
+                                        A lot more on <a target="_blank" href="https://scarpellino.eu"> scarpellino.eu</a>!
+                                    </h3>
+                                </ul>
+                            </li>
+
+                            <!-- <li>
+                                <ul>
+                                    <h3>
+                                        {{ $t('flutter_messages') }}
+                                        <small>( 2022 )</small>
+                                    </h3>
+    
+                                    <li>
+                                        {{ $t('flutter') }} <a target="_blank" href="https://scarpellino.eu">scarpellino.eu</a>.
+                                        <br>
+                                        ⚙️ Flutter + Express + Socket.io
+                                    </li>
+                                </ul>
+                            </li> -->
+
+                            <!-- <li>
+                                <ul>
+                                    <h3>
+                                        <a target="_blank" href="https://bretzel.games/">Bretzel games</a>
+                                        <small>( 2019 - {{ new Date().getFullYear() }}+ )</small>
+                                    </h3>
+    
+                                    <li>
+                                        {{ $t('bretzel_games') }}
+                                        <br>
+                                        ⚙️ NodeJS + Socket.io + VueJS
                                     </li>
                                 </ul>
                             </li>
@@ -203,7 +237,7 @@
                                         ⚙️ Flutter + Express + Socket.io
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                             
                         </ul>
                     </div>
@@ -212,6 +246,17 @@
                     <div>
                         <h2>{{ $t('languages') }}</h2>
                         <ul class="skills">
+                            <li class="skill">
+                                <span>{{ $t('french') }}</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                </div>
+                            </li>
+
                             <li class="skill">
                                 <span>{{ $t('english') }}</span>
                                 <div class="circles">
@@ -229,7 +274,18 @@
                         <h2> {{ $t('skills') }} </h2>
                         <div class="skills">
                             <div class="skill">
-                                <span>React</span>
+                                <span>Git</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <span>Linux</span>
                                 <div class="circles">
                                     <span class="circle active"></span>
                                     <span class="circle active"></span>
@@ -238,7 +294,7 @@
                                     <span class="circle"></span>
                                 </div>
                             </div>
-    
+
                             <div class="skill">
                                 <span>NodeJS</span>
                                 <div class="circles">
@@ -249,7 +305,63 @@
                                     <span class="circle"></span>
                                 </div>
                             </div>
+
+                            <div class="skill">
+                                <span>VueJS</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <span>Java</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                </div>
+                            </div>
+
+
+                            <div class="skill">
+                                <span>C#</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                </div>
+                            </div>
     
+                            <div class="skill">
+                                <span>MySQL</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <span>Flutter</span>
+                                <div class="circles">
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle active"></span>
+                                    <span class="circle"></span>
+                                    <span class="circle"></span>
+                                </div>
+                            </div>
+
                             <div class="skill">
                                 <span>PHP</span>
                                 <div class="circles">
@@ -260,17 +372,17 @@
                                     <span class="circle"></span>
                                 </div>
                             </div>
-    
-                            <div class="skill">
-                                <span>Git</span>
+
+                            <!-- <div class="skill">
+                                <span>React</span>
                                 <div class="circles">
                                     <span class="circle active"></span>
                                     <span class="circle active"></span>
                                     <span class="circle active"></span>
-                                    <span class="circle"></span>
+                                    <span class="circle active"></span>
                                     <span class="circle"></span>
                                 </div>
-                            </div>
+                            </div> -->
     
                             <div class="skill">
                                 <span>Android</span>
@@ -285,61 +397,6 @@
     
                             <div class="skill">
                                 <span>Python</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                    <span class="circle"></span>
-                                </div>
-                            </div>
-    
-                            <div class="skill">
-                                <span>Java</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                    <span class="circle"></span>
-                                </div>
-                            </div>
-    
-                            <div class="skill">
-                                <span>Linux</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                    <span class="circle"></span>
-                                </div>
-                            </div>
-    
-                            <div class="skill">
-                                <span>C#</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                    <span class="circle"></span>
-                                </div>
-                            </div>
-    
-                            <div class="skill">
-                                <span>Flutter</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                    <span class="circle"></span>
-                                </div>
-                            </div>
-    
-                            <div class="skill">
-                                <span>MySQL</span>
                                 <div class="circles">
                                     <span class="circle active"></span>
                                     <span class="circle active"></span>

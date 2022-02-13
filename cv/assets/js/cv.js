@@ -8,6 +8,7 @@ const i18n = new VueI18n({
     locale: 'en-US',
     messages: {
       'en-US': {
+        'self-employed': 'Self-employed',
         developper: "developper",
         years: 'years',
         profil: "Motivated, polyvalent and self-taught developer, new challenges et innovations passionate me. I love develop to help others, and move the world forward.",
@@ -19,13 +20,14 @@ const i18n = new VueI18n({
         projects: 'Projects',
         languages: 'Languages',
         english: 'English',
+        french: 'French',
         skills: 'Skills',
 
         dut: 'End of DUT internship (ESDI - Belfort)',
         syncodeo: 'Website aims to regroup codes and videos in the same platform to learn code easier.',
         zestfully: 'Guide which select only best restaurants for best moments. First in london, then in all over the world.',
         bretzel_games: 'A lot of board game in real time website.',
-        unity: 'Video games with pathfinding to move the player',
+        unity: 'Video games with pathfinding to move the player.',
         qrun: 'Mobile App of treasure hunt. User scan a Qr code and the app give him an advice and tell  if the user is near of the hunted object or not.',
         flutter: 'Mobile App aims to answer to people who send me a message on',
         
@@ -42,7 +44,7 @@ const i18n = new VueI18n({
         november: 'November',
         december: 'December',
 
-        dut_list_1: 'Interactive app build by Unity displayed in real time employe informations of company in an 3D environment.',
+        dut_list_1: 'Interactive app powered by Unity displayed in real time employe informations of company in an 3D environment.',
         dut_list_2: 'We can move in the world with an Android App.',
 
         unity_video_game: 'Unity video game',
@@ -50,6 +52,7 @@ const i18n = new VueI18n({
         flutter_messages: 'Flutter messaging application',
       },
       'fr-FR': {
+        'self-employed': 'Auto entreprise',
         developper: "développeur",
         years: 'ans',
         profil: "Dévelopeur informatique motivioné, polyvalent et autodidacte. La découverte et l'innovation me passionnent. J'aime relever des défis et répondre aux problématiques de demain.",
@@ -61,6 +64,7 @@ const i18n = new VueI18n({
         projects: 'Projets',
         languages: 'Langues',
         english: 'Anglais',
+        french: 'Français',
         skills: 'Compétences',
 
         dut: 'Stage de fin de DUT Informatique (ESDI - Belfort)',
