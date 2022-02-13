@@ -24,10 +24,10 @@ const i18n = new VueI18n({
         skills: 'Skills',
 
         dut: 'End of DUT internship (ESDI - Belfort)',
-        syncodeo: 'Website aims to regroup codes and videos in the same platform to learn code easier.',
+        syncodeo: 'A web application that aims to regroup codes and videos in the same platform to learn code easier.',
         zestfully: 'Guide which select only best restaurants for best moments. First in london, then in all over the world.',
         bretzel_games: 'A lot of board game in real time website.',
-        unity: 'Video games with pathfinding to move the player.',
+        unity: '48h Gamejam  : Procedurally generated world with A* path finding implementation for player and ennemies movement)',
         qrun: 'Mobile App of treasure hunt. User scan a Qr code and the app give him an advice and tell  if the user is near of the hunted object or not.',
         flutter: 'Mobile App aims to answer to people who send me a message on',
         
