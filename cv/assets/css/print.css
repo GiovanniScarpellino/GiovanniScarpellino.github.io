@@ -38,9 +38,9 @@ body {
 }
 
 #giovanniscarpellino-cv .experiences .content{
-    max-height: 480px;
+    /* max-height: 480px; */
 }
 
 #giovanniscarpellino-cv .skills{
-    max-height: 138px;
+    /* max-height: 138px; */
 }

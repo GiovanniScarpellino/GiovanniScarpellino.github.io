@@ -1,7 +1,7 @@
 let now = new Date();
-let age = now.getFullYear() - 1997;
+let age = 2022 - 1997;
 
-if(now.getMonth() <= 5 && now.getDate() < 19)
+if((now.getMonth() <= 5) || (now.getMonth() <= 5 && now.getDate() < 19))
     age--;
 
 const i18n = new VueI18n({
@@ -9,9 +9,10 @@ const i18n = new VueI18n({
     messages: {
       'en-US': {
         'self-employed': 'Self-employed',
-        developper: "developper",
+        developper: "Fullstack developer",
         years: 'years',
-        profil: "Motivated, polyvalent and self-taught developer, new challenges et innovations passionate me. I love develop to help others, and move the world forward.",
+        title_profile: 'Profile',
+        profile: "Motivated, polyvalent and self-taught developer, new challenges and innovations passionate me. I love develop to help others, and move the world forward.",
         education: "education",
         phone: 'Phone',
         website: 'Website',
@@ -53,9 +54,10 @@ const i18n = new VueI18n({
       },
       'fr-FR': {
         'self-employed': 'Auto entreprise',
-        developper: "développeur",
+        developper: "Fullstack développeur",
         years: 'ans',
-        profil: "Dévelopeur informatique motivioné, polyvalent et autodidacte. La découverte et l'innovation me passionnent. J'aime relever des défis et répondre aux problématiques de demain.",
+        title_profile: 'Profil',
+        profile: "Dévelopeur informatique motivioné, polyvalent et autodidacte. La découverte et l'innovation me passionnent. J'aime relever des défis et répondre aux problématiques de demain.",
         education: "formations",
         phone: 'Téléphone',
         website: 'Site web',

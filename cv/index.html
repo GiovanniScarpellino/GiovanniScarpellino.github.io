@@ -14,14 +14,15 @@
 
 <body>
     <div id="app">
-        <div id="languages">
+        <!-- <div id="languages">
             <img src="assets/images/france.png" v-if="$i18n.locale === 'en-US'" @click="$i18n.locale = 'fr-FR'" width="50" height="33" alt="France">
             <img src="assets/images/english.png" v-if="$i18n.locale === 'fr-FR'" @click="$i18n.locale = 'en-US'" width="50" height="33" alt="English">
-        </div>
+        </div> -->
 
         <div id="giovanniscarpellino-cv">
             <header>
                 <div class="title">
+                    <img src="./assets/images/gio.png" alt="Giovanni SCARPELLINO">
                     <h1>Giovanni SCARPELLINO</h1>
                     <span class="sub-title">{{ $t('developper') }} - <span> {{ age }} </span> {{ $t('years') }}</span>
                 </div>
@@ -30,41 +31,10 @@
             <div class="container">
                 <div class="left">
                     <div class="item">
-                        <h2>Profil</h2>
+                        <h2>{{ $t('title_profile') }}</h2>
                         <p>
-                            {{ $t('profil') }}
+                            {{ $t('profile') }}
                         </p>
-                    </div>
-    
-                    <div class="item">
-                        <h2>{{ $t('education') }}</h2>
-    
-                        <div>
-                            <h3>DUT Informatique</h3>
-                            <p>
-                                🇫🇷 Belfort, 2016-2018 <br>
-                                🇨🇦 Matane, {{ $t('august') + ' - ' + $t('december') }} 2017 <br>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <h2>{{ $t('experiences') }}</h2>
-
-                        <div>
-                            <h3>Syncodeo association</h3>
-                            <p>🏴󠁧󠁢󠁥󠁮󠁧󠁿 Haywards Heath, {{ $t('october') }} 2018 - {{ $t('march') }} 2019 </p>
-                        </div>
-
-                        <div>
-                            <h3>Reymann</h3>
-                            <p>🇫🇷 Illkirch, 2019+</p>
-                        </div>
-    
-                        <div>
-                            <h3>{{ $t('self-employed') }}</h3>
-                            <p>🇫🇷 Illkirch, 2019+</p>
-                        </div>
                     </div>
     
                     <div class="item">
@@ -91,12 +61,12 @@
                             </p>
                         </div>
     
-                        <div class="linkedin">
+                        <!-- <div class="linkedin">
                             <h3>Linkedin</h3>
                             <p>
                                 <a target="_blank" href="https://www.linkedin.com/in/giovanni-scarpellino-900587183/"> {{ $t('linkedin') }} </a>
                             </p>
-                        </div>
+                        </div> -->
     
                         <div>
                             <h3>{{ $t('address') }} </h3>
@@ -105,167 +75,16 @@
     
                         <!-- <small>Possesseur du permis B</small> -->
                     </div>
-                </div>
-    
-                <div class="right">
-                    <div class="experiences">
-                        <h2>{{ $t('projects') }}</h2>
-                        <ul class="content">
-                            <li>
-                                <ul>
-                                    <h3>
-                                        <a target="_blank" href="https://www.youtube.com/watch?v=6KKGnPRS_7w"> {{ $t('dut') }}</a>
-                                        <small>( {{ $t('april') }} - {{ $t('july') }} 2018 )</small>
-                                    </h3>
-    
-                                    <li>
-                                        {{ $t('dut_list_1') }}
-                                    </li>
-                                    <li>
-                                        {{ $t('dut_list_2') }}
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul>
-                                    <h3>
-                                        <a target="_blank" href="https://syncodeo.io">Syncodeo.io</a>
-                                        <small>( {{ $t('october') }} 2018 - {{ $t('march') }} 2019 )</small>
-                                    </h3>
-    
-                                    <li>
-                                        {{ $t('syncodeo') }}
-                                        <br>
-                                        ⚙️ React + Ant Design + Hapi + Elasticsearch + Redis
-                                    </li>
-                                </ul>
-                            </li>
-    
-                            <li>
-                                <ul>
-                                    <h3>
-                                        <a target="_blank" href="https://zestfully.co">Zestfully.co</a>
-                                        <small>( 2019 - {{ new Date().getFullYear() }}+ )</small>
-                                    </h3>
-    
-                                    <li>
-                                        {{ $t('zestfully') }}
-                                        <br>
-                                        ⚙️ Elasticsearch + Nuxt + Express + Postgres
-                                    </li>
-                                </ul>
-                            </li>
 
-                            <li>
-                                <ul>
-                                    <h3>
-                                        <a target="_blank" href="https://www.youtube.com/watch?v=irUHvsfppvU"> {{ $t('unity_video_game') }} </a>
-                                        <small>( 2017 )</small>
-                                    </h3>
-    
-                                    <li>
-                                        {{ $t('unity') }}
-                                        <br>
-                                        ⚙️ Unity + C#
-                                    </li>
-                                </ul>
-                            </li>
-    
-                            <li>
-                                <ul>
-                                    <h3>
-                                        A lot more on <a target="_blank" href="https://scarpellino.eu"> scarpellino.eu</a>!
-                                    </h3>
-                                </ul>
-                            </li>
-
-                            <!-- <li>
-                                <ul>
-                                    <h3>
-                                        {{ $t('flutter_messages') }}
-                                        <small>( 2022 )</small>
-                                    </h3>
-    
-                                    <li>
-                                        {{ $t('flutter') }} <a target="_blank" href="https://scarpellino.eu">scarpellino.eu</a>.
-                                        <br>
-                                        ⚙️ Flutter + Express + Socket.io
-                                    </li>
-                                </ul>
-                            </li> -->
-
-                            <!-- <li>
-                                <ul>
-                                    <h3>
-                                        <a target="_blank" href="https://bretzel.games/">Bretzel games</a>
-                                        <small>( 2019 - {{ new Date().getFullYear() }}+ )</small>
-                                    </h3>
-    
-                                    <li>
-                                        {{ $t('bretzel_games') }}
-                                        <br>
-                                        ⚙️ NodeJS + Socket.io + VueJS
-                                    </li>
-                                </ul>
-                            </li>
-    
-                            <li>
-                                <ul>
-                                    <h3>
-                                        <a target="_blank" href="https://www.youtube.com/watch?v=7h78NaebtZ8">{{ $t('app_qrun') }}</a>  
-                                        <small>( 2017 )</small>
-                                    </h3>
-    
-                                    <li>
-                                        {{ $t('qrun') }}
-                                        <br>
-                                        ⚙️ Java + Android Studio + OpenGL
-                                    </li>
-                                </ul>
-                            </li>
-    
-                            <li>
-                                <ul>
-                                    <h3>
-                                        {{ $t('flutter_messages') }}
-                                        <small>( 2022 )</small>
-                                    </h3>
-    
-                                    <li>
-                                        {{ $t('flutter') }} <a target="_blank" href="https://scarpellino.eu">scarpellino.eu</a>.
-                                        <br>
-                                        ⚙️ Flutter + Express + Socket.io
-                                    </li>
-                                </ul>
-                            </li> -->
-                            
-                        </ul>
-                    </div>
-    
-    
                     <div>
                         <h2>{{ $t('languages') }}</h2>
                         <ul class="skills">
                             <li class="skill">
-                                <span>{{ $t('french') }}</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                </div>
+                                <span><strong>{{ $t('french') }}</strong> <br> Native</span>
                             </li>
 
                             <li class="skill">
-                                <span>{{ $t('english') }}</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                </div>
+                                <span><strong>{{ $t('english') }}</strong> <br> B2</span>
                             </li>
                         </ul>
                     </div>
@@ -284,7 +103,7 @@
                                 </div>
                             </div>
 
-                            <div class="skill">
+                            <!-- <div class="skill">
                                 <span>Linux</span>
                                 <div class="circles">
                                     <span class="circle active"></span>
@@ -293,7 +112,7 @@
                                     <span class="circle active"></span>
                                     <span class="circle"></span>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="skill">
                                 <span>NodeJS</span>
@@ -308,17 +127,6 @@
 
                             <div class="skill">
                                 <span>Javascript</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                </div>
-                            </div>
-
-                            <div class="skill">
-                                <span>Typescript</span>
                                 <div class="circles">
                                     <span class="circle active"></span>
                                     <span class="circle active"></span>
@@ -363,7 +171,7 @@
                             </div>
 
                             <div class="skill">
-                                <span>Postsql</span>
+                                <span>PostgreSQL</span>
                                 <div class="circles">
                                     <span class="circle active"></span>
                                     <span class="circle active"></span>
@@ -440,6 +248,110 @@
                             </div>
                         </div>
                     </div>
+                </div>
+    
+                <div class="right">
+                    <div class="experiences">
+                        <h2>{{ $t('experiences') }}</h2>
+                        <ul class="content">
+                            <li>
+                                <ul>
+                                    <h3>
+                                        Reymann, Illkirch, France
+                                        <small>( 2019+ )</small>
+                                    </h3>
+    
+                                    <li>
+                                        Collaborative platform
+                                        <ul>
+                                            <li>
+                                                Web application that aims to make the collaboration easier to create paper catalogs. <br>
+                                                ⚙️ AngularJS + NodeJS + Postgresql
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Electron App
+                                        <ul>
+                                            <li>
+                                                MacOS and Window application that aims to easily open server link and execute Javascript for InDesign and PhotoShop. <br>
+                                                ⚙️ NodeJS + TypeScript + VueJS
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Discord Bot
+                                        <ul>
+                                            <li>
+                                                A Discord bot to manage the company message application. <br>
+                                                ⚙️ NodeJS
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h3>
+                                        Self-employed, Illkirch, France
+                                        <small>( 2019+ )</small>
+                                    </h3>
+    
+                                    <li>
+                                        Havas Voyage
+                                        <ul>
+                                            <li>
+                                                Web site that reference specialists and filter them by location or specialities. <br>
+                                                ⚙️ Wordpress + HTML + Javascript + SCSS
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Zestfully.co
+                                        <ul>
+                                            <li>
+                                                Guide which select only best restaurants for best moments. <br>
+                                                ⚙️ NuxtJS + NodeJS + Postgresql + Elasticsearch
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h3>
+                                        Syncodeo association, Haywards Heath, England
+                                        <small>( {{ $t('october') }} 2018 - {{ $t('march') }} 2019 )</small>
+                                    </h3>
+    
+                                    <li>
+                                        Syncodeo
+                                        <ul>
+                                            <li>
+                                                {{ $t('syncodeo') }} <br>
+                                                ⚙️ React + Express + Postgresql + Elasticsearch 
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul> 
+                    </div>
+
+                    <div class="item">
+                        <h2>{{ $t('education') }}</h2>
+    
+                        <div>
+                            <h3>DUT Informatique</h3>
+                            <p>
+                                Belfort, France, 2016-2018 <br>
+                                Matane, Canada, {{ $t('august') + ' - ' + $t('december') }} 2017 <br>
+                            </p>
+                        </div>
+                    </div>
+    
                 </div>
             </div>
         </div>
