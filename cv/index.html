@@ -37,28 +37,33 @@
                         </p>
                     </div>
     
-                    <div class="item">
+                    <div class="contacts">
                         <h2>Contact</h2>
     
                         <div>
-                            <h3>{{ $t('phone') }}</h3>
+                            <!-- <h3>{{ $t('phone') }}</h3> -->
                             <p>
-                                <a href="tel:+33777059145"> 07 77 05 91 45 </a>
+                                <a href="tel:+33777059145"> <img src="./assets/images/phone-solid.svg" alt="tel"> +33 777 05 91 45 </a>
                             </p>
                         </div>
     
                         <div>
-                            <h3>E-mail</h3>
+                            <!-- <h3>E-mail</h3> -->
                             <p>
-                                <a href="mailto:scarpellino.giovanni@gmail.com"> scarpellino.giovanni@gmail.com </a>
+                                <a href="mailto:scarpellino.giovanni@gmail.com"> <img src="./assets/images/at-solid.svg" alt="pin"> scarpellino.giovanni@gmail.com </a>
                             </p>
                         </div>
     
                         <div>
-                            <h3>{{ $t('website') }}</h3>
+                            <!-- <h3>{{ $t('website') }}</h3> -->
                             <p>
-                                <a target="_blank" href="https://scarpellino.eu"> scarpellino.eu </a>
+                                <a target="_blank" href="https://scarpellino.eu"> <img src="./assets/images/globe-solid.svg" alt="tel"> scarpellino.eu </a>
                             </p>
+                        </div>
+
+                        <div>
+                            <!-- <h3>{{ $t('address') }} </h3> -->
+                            <p> <img src="./assets/images/location-pin-solid.svg" alt="tel"> 44 route de Lyon, 67400 Illkirch, France </p>
                         </div>
     
                         <!-- <div class="linkedin">
@@ -68,23 +73,30 @@
                             </p>
                         </div> -->
     
-                        <div>
-                            <h3>{{ $t('address') }} </h3>
-                            <p> 🇫🇷 44 route de Lyon, 67400 Illkirch </p>
-                        </div>
-    
                         <!-- <small>Possesseur du permis B</small> -->
                     </div>
 
                     <div>
+                        <h2>{{ $t('education') }}</h2>
+    
+                        <div>
+                            <h3>DUT Informatique</h3>
+                            <p>
+                                Belfort, France, 2016-2018 <br>
+                                Matane, Canada, {{ $t('august') + ' - ' + $t('december') }} 2017 <br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
                         <h2>{{ $t('languages') }}</h2>
-                        <ul class="skills">
-                            <li class="skill">
+                        <ul class="languages">
+                            <li>
                                 <span><strong>{{ $t('french') }}</strong> <br> Native</span>
                             </li>
 
-                            <li class="skill">
-                                <span><strong>{{ $t('english') }}</strong> <br> B2</span>
+                            <li>
+                                <span><strong>{{ $t('english') }}</strong> <br> Upper intermediate </span>
                             </li>
                         </ul>
                     </div>
@@ -266,7 +278,7 @@
                                         <ul>
                                             <li>
                                                 Web application that aims to make the collaboration easier to create paper catalogs. <br>
-                                                ⚙️ AngularJS + NodeJS + Postgresql
+                                                <img src="./assets/images/gear-solid.svg"> AngularJS + NodeJS + Postgresql
                                             </li>
                                         </ul>
                                     </li>
@@ -275,7 +287,7 @@
                                         <ul>
                                             <li>
                                                 MacOS and Window application that aims to easily open server link and execute Javascript for InDesign and PhotoShop. <br>
-                                                ⚙️ NodeJS + TypeScript + VueJS
+                                                <img src="./assets/images/gear-solid.svg"> NodeJS + TypeScript + VueJS
                                             </li>
                                         </ul>
                                     </li>
@@ -284,7 +296,7 @@
                                         <ul>
                                             <li>
                                                 A Discord bot to manage the company message application. <br>
-                                                ⚙️ NodeJS
+                                                <img src="./assets/images/gear-solid.svg"> NodeJS
                                             </li>
                                         </ul>
                                     </li>
@@ -303,7 +315,7 @@
                                         <ul>
                                             <li>
                                                 Web site that reference specialists and filter them by location or specialities. <br>
-                                                ⚙️ Wordpress + HTML + Javascript + SCSS
+                                                <img src="./assets/images/gear-solid.svg"> Wordpress + HTML + Javascript + SCSS
                                             </li>
                                         </ul>
                                     </li>
@@ -312,7 +324,7 @@
                                         <ul>
                                             <li>
                                                 Guide which select only best restaurants for best moments. <br>
-                                                ⚙️ NuxtJS + NodeJS + Postgresql + Elasticsearch
+                                                <img src="./assets/images/gear-solid.svg"> NuxtJS + NodeJS + Postgresql + Elasticsearch
                                             </li>
                                         </ul>
                                     </li>
@@ -331,7 +343,26 @@
                                         <ul>
                                             <li>
                                                 {{ $t('syncodeo') }} <br>
-                                                ⚙️ React + Express + Postgresql + Elasticsearch 
+                                                <img src="./assets/images/gear-solid.svg"> React + Express + Postgresql + Elasticsearch 
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h3>
+                                        CEGEP Matane, Matane, Canada
+                                        <small>( August - December 2017 )</small>
+                                    </h3>
+    
+                                    <li>
+                                        <ul>
+                                            Gamejam 48H
+                                            <li>
+                                                Procedurally generated world with A* path finding implementation for player and ennemies movement. <br>
+                                                <img src="./assets/images/gear-solid.svg"> C# + Unity
                                             </li>
                                         </ul>
                                     </li>
@@ -339,19 +370,6 @@
                             </li>
                         </ul> 
                     </div>
-
-                    <div class="item">
-                        <h2>{{ $t('education') }}</h2>
-    
-                        <div>
-                            <h3>DUT Informatique</h3>
-                            <p>
-                                Belfort, France, 2016-2018 <br>
-                                Matane, Canada, {{ $t('august') + ' - ' + $t('december') }} 2017 <br>
-                            </p>
-                        </div>
-                    </div>
-    
                 </div>
             </div>
         </div>

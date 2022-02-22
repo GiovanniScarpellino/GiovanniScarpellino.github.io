@@ -1,7 +1,7 @@
 body{
     --main-bg-color: rgb(231, 231, 231);
     --main-bg-color-dark: rgb(26, 51, 69);
-    --text-color: rgb(74, 74, 74);
+    --text-color: rgb(29, 29, 29);
     --circle-not-active: rgb(193, 193, 193);
     --divider: rgb(150, 150, 150);
     
@@ -21,7 +21,8 @@ body{
         }
 
         body #giovanniscarpellino-cv .title img{
-            top: 40px !important;
+            top: -18px;
+            left: -76px;
         }
     
         body #giovanniscarpellino-cv .container .left{
@@ -52,11 +53,11 @@ body{
     }
 }
 
-body #giovanniscarpellino-cv .title img{
+#giovanniscarpellino-cv .title img{
     position: absolute;
     height: 200px;
     left: -85px;
-    top: 28px;
+    top: 9px;
     z-index: 2
 }
 
@@ -79,10 +80,6 @@ body #giovanniscarpellino-cv .title img{
     overflow: scroll;
 }
 
-#giovanniscarpellino-cv a{
-    color: var(--text-color);
-}
-
 #giovanniscarpellino-cv a:hover{
     font-weight: bold;
 }
@@ -94,6 +91,20 @@ body #giovanniscarpellino-cv .title img{
 
 #giovanniscarpellino-cv ul li{
     list-style: none;
+}
+
+#giovanniscarpellino-cv .contacts img{
+    height: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+#giovanniscarpellino-cv .languages li{
+    display: inline-block;
+}
+
+#giovanniscarpellino-cv .languages li:first-child{
+    margin-right: 75px;
 }
 
 #giovanniscarpellino-cv .skills{
@@ -150,13 +161,18 @@ body #giovanniscarpellino-cv .title img{
 #giovanniscarpellino-cv p{
     margin-top: 0px;
     margin-bottom: 0.6em;
+}
+
+#giovanniscarpellino-cv a,
+#giovanniscarpellino-cv .left,
+#giovanniscarpellino-cv .right{
     color: var(--text-color);
 }
 
 #giovanniscarpellino-cv header{
     background: var(--main-bg-color-dark);
     color: white;
-    padding: 30px;
+    padding: 10px;
 }
 
 #giovanniscarpellino-cv header .title{
@@ -223,9 +239,19 @@ body #giovanniscarpellino-cv .title img{
     padding: 20px 40px;
 }
 
+#giovanniscarpellino-cv .experiences ul.content img{
+    height: 15px;
+    width: 15px;
+}
+
+#giovanniscarpellino-cv .experiences ul.content > li{
+    margin-bottom: 10px;
+}
+
 #giovanniscarpellino-cv .experiences ul li{
     list-style: none;
     margin-left: 0px;
+    margin-bottom: 5px;
 }
 
 #giovanniscarpellino-cv .experiences ul li ul li{

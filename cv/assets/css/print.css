@@ -32,9 +32,14 @@ body {
     display: none;
 }
 
+#giovanniscarpellino-cv .languages{
+    overflow: visible;
+    width: 102%;
+}
+
 #giovanniscarpellino-cv .skills,
 #giovanniscarpellino-cv .experiences .content{
-    overflow: hidden;
+    overflow: visible;
 }
 
 #giovanniscarpellino-cv .experiences .content{
