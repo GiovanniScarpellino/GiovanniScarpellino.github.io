@@ -14,10 +14,10 @@
 
 <body>
     <div id="app">
-        <!-- <div id="languages">
+        <div id="languages">
             <img src="assets/images/france.png" v-if="$i18n.locale === 'en-US'" @click="$i18n.locale = 'fr-FR'" width="50" height="33" alt="France">
             <img src="assets/images/english.png" v-if="$i18n.locale === 'fr-FR'" @click="$i18n.locale = 'en-US'" width="50" height="33" alt="English">
-        </div> -->
+        </div>
 
         <div id="giovanniscarpellino-cv">
             <header>
@@ -92,11 +92,11 @@
                         <h2>{{ $t('languages') }}</h2>
                         <ul class="languages">
                             <li>
-                                <span><strong>{{ $t('french') }}</strong> <br> Native</span>
+                                <span><strong>{{ $t('french') }}</strong> <br> {{ $t('native') }}</span>
                             </li>
 
                             <li>
-                                <span><strong>{{ $t('english') }}</strong> <br> Upper intermediate </span>
+                                <span><strong>{{ $t('english') }}</strong> <br> {{ $t('upper_intermediate') }} </span>
                             </li>
                         </ul>
                     </div>
@@ -274,10 +274,10 @@
                                     </h3>
     
                                     <li>
-                                        Collaborative platform
+                                        {{ $t('collaborative_plateform') }}
                                         <ul>
                                             <li>
-                                                Web application that aims to make the collaboration easier to create paper catalogs. <br>
+                                                {{ $t('plateform') }} <br>
                                                 <img src="./assets/images/gear-solid.svg"> AngularJS + NodeJS + Postgresql
                                             </li>
                                         </ul>
@@ -286,7 +286,7 @@
                                         Electron App
                                         <ul>
                                             <li>
-                                                MacOS and Window application that aims to easily open server link and execute Javascript for InDesign and PhotoShop. <br>
+                                                {{ $t('desktop') }} <br>
                                                 <img src="./assets/images/gear-solid.svg"> NodeJS + TypeScript + VueJS
                                             </li>
                                         </ul>
@@ -295,7 +295,7 @@
                                         Discord Bot
                                         <ul>
                                             <li>
-                                                A Discord bot to manage the company message application. <br>
+                                                {{ $t('discord') }} <br>
                                                 <img src="./assets/images/gear-solid.svg"> NodeJS
                                             </li>
                                         </ul>
@@ -306,7 +306,7 @@
                             <li>
                                 <ul>
                                     <h3>
-                                        Self-employed, Illkirch, France
+                                        {{ $t('self-employed') }}, Illkirch, France
                                         <small>( 2019+ )</small>
                                     </h3>
     
@@ -314,7 +314,7 @@
                                         Havas Voyage
                                         <ul>
                                             <li>
-                                                Web site that reference specialists and filter them by location or specialities. <br>
+                                                {{ $t('havas') }} <br>
                                                 <img src="./assets/images/gear-solid.svg"> Wordpress + HTML + Javascript + SCSS
                                             </li>
                                         </ul>
@@ -323,7 +323,7 @@
                                         Zestfully.co
                                         <ul>
                                             <li>
-                                                Guide which select only best restaurants for best moments. <br>
+                                                {{ $t('zestfully') }} <br>
                                                 <img src="./assets/images/gear-solid.svg"> NuxtJS + NodeJS + Postgresql + Elasticsearch
                                             </li>
                                         </ul>
@@ -334,7 +334,7 @@
                             <li>
                                 <ul>
                                     <h3>
-                                        Syncodeo association, Haywards Heath, England
+                                        Syncodeo association, Haywards Heath, {{ $t('england') }}
                                         <small>( {{ $t('october') }} 2018 - {{ $t('march') }} 2019 )</small>
                                     </h3>
     
@@ -354,14 +354,14 @@
                                 <ul>
                                     <h3>
                                         CEGEP Matane, Matane, Canada
-                                        <small>( August - December 2017 )</small>
+                                        <small>( {{ $t('august') }} - {{ $t('december') }} 2017 )</small>
                                     </h3>
     
                                     <li>
                                         <ul>
                                             Gamejam 48H
                                             <li>
-                                                Procedurally generated world with A* path finding implementation for player and ennemies movement. <br>
+                                                {{ $t('unity') }} <br>
                                                 <img src="./assets/images/gear-solid.svg"> C# + Unity
                                             </li>
                                         </ul>

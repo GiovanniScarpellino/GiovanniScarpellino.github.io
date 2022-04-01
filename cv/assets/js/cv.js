@@ -5,7 +5,7 @@ if((now.getMonth() <= 5) || (now.getMonth() <= 5 && now.getDate() < 19))
     age--;
 
 const i18n = new VueI18n({
-    locale: 'en-US',
+    locale: 'fr-FR',
     messages: {
       'en-US': {
         'self-employed': 'Self-employed',
@@ -21,16 +21,24 @@ const i18n = new VueI18n({
         projects: 'Projects',
         languages: 'Languages',
         english: 'English',
+        england: 'England',
         french: 'French',
         skills: 'Skills',
 
+        native: 'Native',
+        upper_intermediate: 'Upper Intermediate',
+
+        plateform: 'Web application that aims to make the collaboration easier to create paper catalogs.',
+        desktop: 'MacOS and Window application that aims to easily open server link and execute Javascript for InDesign and PhotoShop.',
         dut: 'End of DUT internship (ESDI - Belfort)',
         syncodeo: 'A web application that aims to regroup codes and videos in the same platform to learn code easier.',
-        zestfully: 'Guide which select only best restaurants for best moments. First in london, then in all over the world.',
+        zestfully: 'Guide which select only best restaurants for best moments.',
         bretzel_games: 'A lot of board game in real time website.',
-        unity: '48h Gamejam  : Procedurally generated world with A* path finding implementation for player and ennemies movement)',
+        unity: 'Procedurally generated world with A* path finding implementation for player and ennemies movement.',
         qrun: 'Mobile App of treasure hunt. User scan a Qr code and the app give him an advice and tell  if the user is near of the hunted object or not.',
         flutter: 'Mobile App aims to answer to people who send me a message on',
+        discord: 'A Discord bot to manage the company message application.',
+        havas: 'Web site that reference specialists and filter them by location or specialities.',
         
         january: 'January',
         february: 'February',
@@ -51,13 +59,15 @@ const i18n = new VueI18n({
         unity_video_game: 'Unity video game',
         app_qrun: 'Qrun Android Application',
         flutter_messages: 'Flutter messaging application',
+
+        collaborative_plateform: 'Collaborative platform',
       },
       'fr-FR': {
         'self-employed': 'Auto entreprise',
         developper: "Fullstack développeur",
         years: 'ans',
         title_profile: 'Profil',
-        profile: "Dévelopeur informatique motivioné, polyvalent et autodidacte. La découverte et l'innovation me passionnent. J'aime relever des défis et répondre aux problématiques de demain.",
+        profile: "Développeur informatique motivé, polyvalent et autodidacte. La découverte et l'innovation me passionnent. J'aime relever des défis et répondre aux problématiques de demain.",
         education: "formations",
         phone: 'Téléphone',
         website: 'Site web',
@@ -66,15 +76,23 @@ const i18n = new VueI18n({
         projects: 'Projets',
         languages: 'Langues',
         english: 'Anglais',
+        england: 'Angleterre',
         french: 'Français',
         skills: 'Compétences',
 
+        native: 'Natif',
+        upper_intermediate: 'C1',
+
+        plateform: 'Application Web qui vise à faciliter la collaboration pour créer des catalogues papier.',
+        desktop: 'Application MacOS et Windows qui vise à ouvrir facilement le lien du serveur et à exécuter Javascript pour InDesign et PhotoShop.',
         dut: 'Stage de fin de DUT Informatique (ESDI - Belfort)',
         syncodeo: 'Plateforme web permettant de regrouper code et vidéo dans une même plateforme dans le but de rendre l\'apprentissage du code plus accessible.',
-        zestfully: 'Guide des meilleurs restaurants pour toutes les occasions. Premièrement à Londres, puis à travers le monde!',
+        zestfully: 'Guide des meilleurs restaurants pour toutes les occasions.',
         bretzel_games: 'Plusieurs jeux de plateau refait en web et en temps réel.',
-        unity: 'Jeu vidéo avec du Pathfinding pour déplacement de personnes.',
+        unity: 'Monde généré de manière procédurale avec une implémentation de recherche de chemin A * pour le mouvement des joueurs et des ennemis.',
         qrun: 'Application de chasse au trésor. L\'utilisateur scanne un QR code et l\'application lui donne un indice et indique à combien de mètre est l\'objet à récupérer.',flutter: 'Application mobile permettant de répondre aux personnes qui envoient un message sur',
+        discord: 'Un bot Discord pour gérer l\'application de messagerie de l\'entreprise.',
+        havas: 'Site Web qui référence des spécialistes et les filtre par lieu ou par spécialités.',
 
         january: 'Janvier',
         february: 'Février',
@@ -95,6 +113,8 @@ const i18n = new VueI18n({
         unity_video_game: 'Jeu vidéo avec Unity',
         app_qrun: 'Application android QRun',
         flutter_messages: 'Application Flutter de messagerie',
+
+        collaborative_plateform: 'Plateforme collaborative',
       }
     }
 });
