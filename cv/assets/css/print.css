@@ -1,51 +1,155 @@
-body {
-    -webkit-print-color-adjust: exact !important;
-    margin: 0px;
-}
-
 @media print {
-    @page {
-        size: 210mm 297mm;
-        margin: 0mm;
-        margin-right: 0mm;
+    :root {
+        /* Sizing variables */
+        --base-font-size: 9.5pt;
+        --line-height: 1.35;
+        --h1-font-size: 1.6rem;
+        --h2-font-size: 1.1rem;
+        --h3-font-size: 1rem;
+        --small-font-size: 8pt;
+        --page-margin: 1cm;
+        --container-gap: 1cm;
+        --header-padding: 0.5rem;
     }
-}
 
-#languages{
-    display: none;
-}
+    body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
 
-#giovanniscarpellino-cv {
-    max-height: 297mm;
-    max-width: 210mm;
-    width: 210mm;
-    height: 297mm;
-    margin: auto;
-    overflow: hidden;
-}
+    @page {
+        size: A4;
+        margin: var(--page-margin);
+    }
 
-#giovanniscarpellino-cv a {
-    text-decoration: none;
-}
+    body, #app {
+        margin: 0;
+        background-color: var(--container-bg-color);
+        font-size: var(--base-font-size);
+        line-height: var(--line-height);
+    }
 
-#giovanniscarpellino-cv .linkedin {
-    display: none;
-}
+    #app {
+        box-shadow: none;
+        border-radius: 0;
+        height: calc(297mm - (var(--page-margin) * 2));
+        width: calc(210mm - (var(--page-margin) * 2));
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
 
-#giovanniscarpellino-cv .languages{
-    overflow: visible;
-    width: 102%;
-}
+    #languages {
+        display: none;
+    }
 
-#giovanniscarpellino-cv .skills,
-#giovanniscarpellino-cv .experiences .content{
-    overflow: visible;
-}
+    header {
+        padding: var(--header-padding);
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border-bottom: 2px solid var(--primary-color);
+    }
 
-#giovanniscarpellino-cv .experiences .content{
-    /* max-height: 480px; */
-}
+    header .title {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
 
-#giovanniscarpellino-cv .skills{
-    /* max-height: 138px; */
+    header .title img {
+        width: 70px;
+        height: 70px;
+        border-width: 2px;
+    }
+
+    header h1 {
+        font-size: var(--h1-font-size);
+        margin: 0;
+    }
+
+    header .sub-title {
+        font-size: 0.9rem;
+        margin: 0;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        gap: var(--container-gap);
+        padding: 0.5cm;
+        flex-grow: 1;
+        overflow: hidden;
+    }
+
+    h2 {
+        font-size: var(--h2-font-size);
+        margin-top: 0.5rem;
+        margin-bottom: 0.4rem;
+        padding-bottom: 0.2rem;
+    }
+
+    h3 {
+        font-size: var(--h3-font-size);
+        margin-bottom: 0.2rem;
+    }
+
+    .left, .right {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .contacts .item, .skills .skill, .languages li {
+        margin-bottom: 0.2rem;
+    }
+    
+    .contacts .item span, .contacts .item a {
+        font-size: var(--small-font-size);
+    }
+
+    .skills {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0 0.5rem;
+    }
+
+    .skills .skill span {
+        font-size: var(--small-font-size);
+        margin-bottom: 0.2rem;
+    }
+
+    .skills .circles {
+        gap: 0.2rem;
+    }
+
+    .skills .circle {
+        width: 8px;
+        height: 8px;
+    }
+
+    .experiences .content > li {
+        margin-bottom: 0.4rem;
+        padding-left: 0.8rem;
+    }
+
+    .experiences .content > li::before {
+        width: 8px;
+        height: 8px;
+        left: -5px;
+    }
+
+    .experiences h3 {
+        margin-bottom: 0.1rem;
+    }
+
+    .experiences ul li {
+        margin-bottom: 0.2rem;
+    }
+
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+        transition: none !important;
+    }
 }

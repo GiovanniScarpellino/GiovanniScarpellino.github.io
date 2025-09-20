@@ -14,362 +14,237 @@
 
 <body>
     <div id="app">
-        <div id="languages">
-            <img src="assets/images/france.png" v-if="$i18n.locale === 'en-US'" @click="$i18n.locale = 'fr-FR'" width="50" height="33" alt="France">
-            <img src="assets/images/english.png" v-if="$i18n.locale === 'fr-FR'" @click="$i18n.locale = 'en-US'" width="50" height="33" alt="English">
-        </div>
-
-        <div id="giovanniscarpellino-cv">
-            <header>
-                <div class="title">
-                    <img src="./assets/images/gio.png" alt="Giovanni SCARPELLINO">
+        <header>
+            <div id="languages">
+                <span>{{ $i18n.locale === 'en-US' ? 'Language' : 'Langue' }}</span>
+                <img src="assets/images/france.png" v-if="$i18n.locale === 'en-US'" @click="$i18n.locale = 'fr-FR'" alt="France">
+                <img src="assets/images/english.png" v-if="$i18n.locale === 'fr-FR'" @click="$i18n.locale = 'en-US'" alt="English">
+            </div>
+            <div class="title">
+                <img src="./assets/images/gio.png" alt="Giovanni SCARPELLINO">
+                <div>
                     <h1>Giovanni SCARPELLINO</h1>
-                    <span class="sub-title">{{ $t('developper') }} - <span> {{ age }} </span> {{ $t('years') }}</span>
+                    <span class="sub-title">{{ $t('developper') }} - {{ age }} {{ $t('years') }}</span>
                 </div>
-            </header>
-    
-            <div class="container">
-                <div class="left">
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="left">
+                <div class="item">
+                    <h2>{{ $t('title_profile') }}</h2>
+                    <p>{{ $t('profile') }}</p>
+                </div>
+
+                <div class="contacts">
+                    <h2>Contact</h2>
                     <div class="item">
-                        <h2>{{ $t('title_profile') }}</h2>
+                        <img src="./assets/images/phone-solid.svg" alt="Phone">
+                        <a href="tel:+33777059145">07 77 05 91 45</a>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/images/at-solid.svg" alt="Email">
+                        <a href="mailto:scarpellino.giovanni@gmail.com">scarpellino.giovanni@gmail.com</a>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/images/globe-solid.svg" alt="Website">
+                        <a target="_blank" href="https://scarpellino.fr">scarpellino.fr</a>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/images/location-pin-solid.svg" alt="Address">
+                        <span>2 Rue Maria Callas, 67380 Lingolsheim, France</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>{{ $t('education') }}</h2>
+                    <div>
+                        <h3>DUT Informatique</h3>
                         <p>
-                            {{ $t('profile') }}
+                            Belfort, France, 2016-2018 <br>
+                            Matane, Canada, {{ $t('august') }} - {{ $t('december') }} 2017
                         </p>
                     </div>
-    
-                    <div class="contacts">
-                        <h2>Contact</h2>
-    
-                        <div>
-                            <!-- <h3>{{ $t('phone') }}</h3> -->
-                            <p>
-                                <a href="tel:+33777059145"> <img src="./assets/images/phone-solid.svg" alt="tel"> +33 777 05 91 45 </a>
-                            </p>
+                </div>
+
+                <div>
+                    <h2>{{ $t('languages') }}</h2>
+                    <ul class="languages">
+                        <li><strong>{{ $t('french') }}:</strong> {{ $t('native') }}</li>
+                        <li><strong>{{ $t('english') }}:</strong> {{ $t('upper_intermediate') }}</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>{{ $t('skills') }}</h2>
+                    <div class="skills">
+                        <div class="skill">
+                            <span>Git</span>
+                            <div class="circles">
+                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span>
+                            </div>
                         </div>
-    
-                        <div>
-                            <!-- <h3>E-mail</h3> -->
-                            <p>
-                                <a href="mailto:scarpellino.giovanni@gmail.com"> <img src="./assets/images/at-solid.svg" alt="pin"> scarpellino.giovanni@gmail.com </a>
-                            </p>
+                        <div class="skill">
+                            <span>NodeJS</span>
+                            <div class="circles">
+                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span>
+                            </div>
                         </div>
-    
-                        <div>
-                            <!-- <h3>{{ $t('website') }}</h3> -->
-                            <p>
-                                <a target="_blank" href="https://scarpellino.eu"> <img src="./assets/images/globe-solid.svg" alt="tel"> scarpellino.eu </a>
-                            </p>
+                        <div class="skill">
+                            <span>Javascript</span>
+                            <div class="circles">
+                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span>
+                            </div>
                         </div>
-
-                        <div>
-                            <!-- <h3>{{ $t('address') }} </h3> -->
-                            <p> <img src="./assets/images/location-pin-solid.svg" alt="tel"> 44 route de Lyon, 67400 Illkirch, France </p>
+                        <div class="skill">
+                            <span>VueJS</span>
+                            <div class="circles">
+                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span>
+                            </div>
                         </div>
-    
-                        <!-- <div class="linkedin">
-                            <h3>Linkedin</h3>
-                            <p>
-                                <a target="_blank" href="https://www.linkedin.com/in/giovanni-scarpellino-900587183/"> {{ $t('linkedin') }} </a>
-                            </p>
-                        </div> -->
-    
-                        <!-- <small>Possesseur du permis B</small> -->
-                    </div>
-
-                    <div>
-                        <h2>{{ $t('education') }}</h2>
-    
-                        <div>
-                            <h3>DUT Informatique</h3>
-                            <p>
-                                Belfort, France, 2016-2018 <br>
-                                Matane, Canada, {{ $t('august') + ' - ' + $t('december') }} 2017 <br>
-                            </p>
+                        <div class="skill">
+                            <span>Java</span>
+                            <div class="circles">
+                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span>
+                            </div>
                         </div>
-                    </div>
-
-                    <div>
-                        <h2>{{ $t('languages') }}</h2>
-                        <ul class="languages">
-                            <li>
-                                <span><strong>{{ $t('french') }}</strong> <br> {{ $t('native') }}</span>
-                            </li>
-
-                            <li>
-                                <span><strong>{{ $t('english') }}</strong> <br> {{ $t('upper_intermediate') }} </span>
-                            </li>
-                        </ul>
-                    </div>
-    
-                    <div>
-                        <h2> {{ $t('skills') }} </h2>
-                        <div class="skills">
-                            <div class="skill">
-                                <span>Git</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                </div>
+                        <div class="skill">
+                            <span>C#</span>
+                            <div class="circles">
+                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span>
                             </div>
-
-                            <!-- <div class="skill">
-                                <span>Linux</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                </div>
-                            </div> -->
-
-                            <div class="skill">
-                                <span>NodeJS</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                </div>
+                        </div>
+                        <div class="skill">
+                            <span>PostgreSQL</span>
+                            <div class="circles">
+                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span>
                             </div>
-
-                            <div class="skill">
-                                <span>Javascript</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                </div>
+                        </div>
+                        <div class="skill">
+                            <span>MySQL</span>
+                            <div class="circles">
+                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span>
                             </div>
-
-                            <div class="skill">
-                                <span>VueJS</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                </div>
+                        </div>
+                        <div class="skill">
+                            <span>Flutter</span>
+                            <div class="circles">
+                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span><span class="circle"></span>
                             </div>
-
-                            <div class="skill">
-                                <span>Java</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                </div>
+                        </div>
+                        <div class="skill">
+                            <span>PHP</span>
+                            <div class="circles">
+                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span><span class="circle"></span>
                             </div>
-
-
-                            <div class="skill">
-                                <span>C#</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                </div>
+                        </div>
+                        <div class="skill">
+                            <span>Android</span>
+                            <div class="circles">
+                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span><span class="circle"></span>
                             </div>
-
-                            <div class="skill">
-                                <span>PostgreSQL</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                </div>
-                            </div>
-    
-                            <div class="skill">
-                                <span>MySQL</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                </div>
-                            </div>
-
-                            <div class="skill">
-                                <span>Flutter</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                    <span class="circle"></span>
-                                </div>
-                            </div>
-
-                            <div class="skill">
-                                <span>PHP</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                    <span class="circle"></span>
-                                </div>
-                            </div>
-
-                            <!-- <div class="skill">
-                                <span>React</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                </div>
-                            </div> -->
-    
-                            <div class="skill">
-                                <span>Android</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                    <span class="circle"></span>
-                                </div>
-                            </div>
-    
-                            <div class="skill">
-                                <span>Python</span>
-                                <div class="circles">
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle active"></span>
-                                    <span class="circle"></span>
-                                    <span class="circle"></span>
-                                </div>
+                        </div>
+                        <div class="skill">
+                            <span>Python</span>
+                            <div class="circles">
+                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span><span class="circle"></span>
                             </div>
                         </div>
                     </div>
                 </div>
-    
-                <div class="right">
-                    <div class="experiences">
-                        <h2>{{ $t('experiences') }}</h2>
-                        <ul class="content">
-                            <li>
-                                <ul>
-                                    <h3>
-                                        Reymann, Illkirch, France
-                                        <small>( 2019+ )</small>
-                                    </h3>
-    
-                                    <li>
-                                        {{ $t('collaborative_plateform') }}
-                                        <ul>
-                                            <li>
-                                                {{ $t('plateform') }} <br>
-                                                <img src="./assets/images/gear-solid.svg"> AngularJS + NodeJS + Postgresql
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        Electron App
-                                        <ul>
-                                            <li>
-                                                {{ $t('desktop') }} <br>
-                                                <img src="./assets/images/gear-solid.svg"> NodeJS + TypeScript + VueJS
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        Discord Bot
-                                        <ul>
-                                            <li>
-                                                {{ $t('discord') }} <br>
-                                                <img src="./assets/images/gear-solid.svg"> NodeJS
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
+            </div>
 
-                            <li>
-                                <ul>
-                                    <h3>
-                                        {{ $t('self-employed') }}, Illkirch, France
-                                        <small>( 2019+ )</small>
-                                    </h3>
-    
-                                    <li>
-                                        Havas Voyage
-                                        <ul>
-                                            <li>
-                                                {{ $t('havas') }} <br>
-                                                <img src="./assets/images/gear-solid.svg"> Wordpress + HTML + Javascript + SCSS
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        Zestfully.co
-                                        <ul>
-                                            <li>
-                                                {{ $t('zestfully') }} <br>
-                                                <img src="./assets/images/gear-solid.svg"> NuxtJS + NodeJS + Postgresql + Elasticsearch
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
+            <div class="right">
+                <div class="experiences">
+                    <h2>{{ $t('experiences') }}</h2>
+                    <ul class="content">
+                        <li>
+                            <h3>Reymann / Sprey, Illkirch, France <small>(2019 - 2025)</small></h3>
+                            <ul>
+                                <li>
+                                    {{ $t('collaborative_plateform') }}
+                                    <ul>
+                                        <li>
+                                            {{ $t('plateform') }} <br>
+                                            <img src="./assets/images/gear-solid.svg"> AngularJS + NodeJS + Postgresql
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Electron App
+                                    <ul>
+                                        <li>
+                                            {{ $t('desktop') }} <br>
+                                            <img src="./assets/images/gear-solid.svg"> NodeJS + TypeScript + VueJS
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Discord Bot
+                                    <ul>
+                                        <li>
+                                            {{ $t('discord') }} <br>
+                                            <img src="./assets/images/gear-solid.svg"> NodeJS
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
 
-                            <li>
-                                <ul>
-                                    <h3>
-                                        Syncodeo association, Haywards Heath, {{ $t('england') }}
-                                        <small>( {{ $t('october') }} 2018 - {{ $t('march') }} 2019 )</small>
-                                    </h3>
-    
-                                    <li>
-                                        Syncodeo
-                                        <ul>
-                                            <li>
-                                                {{ $t('syncodeo') }} <br>
-                                                <img src="./assets/images/gear-solid.svg"> React + Express + Postgresql + Elasticsearch 
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
+                        <li>
+                            <h3>{{ $t('self-employed') }}, Lingolsheim, France <small>(2019+)</small></h3>
+                            <ul>
+                                <li>
+                                    Havas Voyage
+                                    <ul>
+                                        <li>
+                                            {{ $t('havas') }} <br>
+                                            <img src="./assets/images/gear-solid.svg"> Wordpress + HTML + Javascript + SCSS
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Zestfully.co
+                                    <ul>
+                                        <li>
+                                            {{ $t('zestfully') }} <br>
+                                            <img src="./assets/images/gear-solid.svg"> NuxtJS + NodeJS + Postgresql + Elasticsearch
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
 
-                            <li>
-                                <ul>
-                                    <h3>
-                                        CEGEP Matane, Matane, Canada
-                                        <small>( {{ $t('august') }} - {{ $t('december') }} 2017 )</small>
-                                    </h3>
-    
-                                    <li>
-                                        <ul>
-                                            Gamejam 48H
-                                            <li>
-                                                {{ $t('unity') }} <br>
-                                                <img src="./assets/images/gear-solid.svg"> C# + Unity
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul> 
-                    </div>
+                        <li>
+                            <h3>Syncodeo association, Haywards Heath, {{ $t('england') }} <small>( {{ $t('october') }} 2018 - {{ $t('march') }} 2019 )</small></h3>
+                            <ul>
+                                <li>
+                                    Syncodeo
+                                    <ul>
+                                        <li>
+                                            {{ $t('syncodeo') }} <br>
+                                            <img src="./assets/images/gear-solid.svg"> React + Express + Postgresql + Elasticsearch
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <h3>CEGEP Matane, Matane, Canada <small>( {{ $t('august') }} - {{ $t('december') }} 2017 )</small></h3>
+                            <ul>
+                                <li>
+                                    Gamejam 48H
+                                    <ul>
+                                        <li>
+                                            {{ $t('unity') }} <br>
+                                            <img src="./assets/images/gear-solid.svg"> C# + Unity
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

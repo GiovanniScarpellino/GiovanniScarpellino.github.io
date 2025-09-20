@@ -1,269 +1,265 @@
-body{
-    --main-bg-color: rgb(231, 231, 231);
-    --main-bg-color-dark: rgb(26, 51, 69);
-    --text-color: rgb(29, 29, 29);
-    --circle-not-active: rgb(193, 193, 193);
-    --divider: rgb(150, 150, 150);
-    
-    margin: 0px;
-    background: var(--circle-not-active);
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
+    --container-bg-color: #ffffff;
+    --divider-color: #bdc3c7;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
     font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
-@media not print {
-    @media (max-width: 700px) { 
-        body #giovanniscarpellino-cv .container{
-            display: block;
-        }
-
-        body #giovanniscarpellino-cv .title{
-            font-size: 0.7em;
-        }
-
-        body #giovanniscarpellino-cv .title img{
-            top: -18px;
-            left: -76px;
-        }
-    
-        body #giovanniscarpellino-cv .container .left{
-            position: relative;
-            width: calc(100% - 80px);
-        }
-    
-        body #giovanniscarpellino-cv .container .left::after{
-            content: '';
-            height: 1px;
-            width: 80%;
-            right: 10%;
-            position: absolute;
-            top: 102%;
-            background-color: var(--divider);
-        }
-    
-        body #giovanniscarpellino-cv .container .right{
-            width: calc(100% - 80px);
-        }
-    }
-    
-    @media (max-width: 720px) { 
-        body #giovanniscarpellino-cv header .title .sub-title{
-            text-align: center;
-            bottom: -1.7em;
-        }
-    }
+#app {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: var(--container-bg-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
 }
 
-#giovanniscarpellino-cv .title img{
+#languages {
     position: absolute;
-    height: 200px;
-    left: -85px;
-    top: 9px;
-    z-index: 2
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
 
-#languages{
-    position: fixed;
-    right: 15%;
-    top: 0px;
-    height: 50px;
-    width: 50px;   
-}
-
-#languages img{
-    width: 100%;   
-    cursor: pointer;
-}
-
-#giovanniscarpellino-cv {
-    max-width: 1020px;
-    margin: auto;
-    overflow: scroll;
-}
-
-#giovanniscarpellino-cv a:hover{
+#languages span {
+    color: white;
     font-weight: bold;
 }
 
-#giovanniscarpellino-cv ul{
-    padding: 0px;
-    margin: 0px;
+#languages img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
 }
 
-#giovanniscarpellino-cv ul li{
-    list-style: none;
+#languages img:hover {
+    transform: scale(1.1);
 }
 
-#giovanniscarpellino-cv .contacts img{
-    height: 15px;
-    height: 15px;
-    margin-right: 5px;
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
 }
 
-#giovanniscarpellino-cv .languages li{
-    display: inline-block;
+header .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
-#giovanniscarpellino-cv .languages li:first-child{
-    margin-right: 75px;
+header .title img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--secondary-color);
+    object-fit: cover;
 }
 
-#giovanniscarpellino-cv .skills{
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header .sub-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.left, .right {
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+.contacts .item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contacts img {
+    width: 20px;
+    height: 20px;
+}
+
+.skills {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 0 1rem;
 }
 
-#giovanniscarpellino-cv .skills .skill{
-    display: inline-block;
+.skills .skill {
+    margin-bottom: 1rem;
 }
 
-#giovanniscarpellino-cv .skills .skill span{
-    display: inline-block;
-    width: 75px;
-    overflow: visible;
-}
-
-#giovanniscarpellino-cv .skills .skill .circles{
-    display: inline-block;
-}
-
-#giovanniscarpellino-cv .skills .skill .circles .circle{
-    display: inline-block;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background: var(--circle-not-active);
-}
-
-#giovanniscarpellino-cv .skills .skill .circles .circle.active{
-    background: var(--main-bg-color-dark);
-}
-
-
-#giovanniscarpellino-cv .skills  ul li{
-    list-style: disc;
-    margin-left: 15px;
-}
-
-#giovanniscarpellino-cv h2{
-    text-transform: uppercase;
-    color: var(--main-bg-color-dark);
-    margin-bottom: 5px;
-}
-
-#giovanniscarpellino-cv h3{
-    font-size: 1.1em;
-    margin-bottom: 5px;
+.skills .skill span {
+    display: block;
+    margin-bottom: 0.5rem;
     font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 0px;
 }
 
-#giovanniscarpellino-cv p{
-    margin-top: 0px;
-    margin-bottom: 0.6em;
+.skills .circles {
+    display: flex;
+    gap: 0.5rem;
 }
 
-#giovanniscarpellino-cv a,
-#giovanniscarpellino-cv .left,
-#giovanniscarpellino-cv .right{
+.skills .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--divider-color);
+}
+
+.skills .circle.active {
+    background-color: var(--secondary-color);
+}
+
+.languages ul {
+    list-style: none;
+    padding: 0;
+}
+
+.languages li {
+    margin-bottom: 0.5rem;
+}
+
+.experiences .content > li {
+    margin-bottom: 2rem;
+    border-left: 2px solid var(--divider-color);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.experiences .content > li::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--container-bg-color);
+}
+
+.experiences h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.experiences h3 small {
+    font-size: 0.9rem;
+    font-weight: 400;
     color: var(--text-color);
 }
 
-#giovanniscarpellino-cv header{
-    background: var(--main-bg-color-dark);
-    color: white;
-    padding: 10px;
-}
-
-#giovanniscarpellino-cv header .title{
-    position: relative;
-    max-width: 700px;
-    margin: auto;
-}
-
-#giovanniscarpellino-cv header .title h1{
-    text-transform: uppercase;
-    border: 5px solid white;
-    font-weight: bold;
-    padding: 50px;
-    font-size: 3em;
-    text-align: center;
-}
-
-#giovanniscarpellino-cv header .title .sub-title{
-    font-size: 1.3em;
-    font-weight: bold;
-    position: absolute;
-    bottom: -1em;
-    text-transform: uppercase;
-    left: 50%;
-    transform: translateX(-50%);
-    background: white;
-    color: var(--main-bg-color-dark);
-    display: inline-block;
-    padding: 15px 50px;
-    width: 65%;
-    text-align: center;
-}
-
-#giovanniscarpellino-cv .container{
-    background: var(--main-bg-color);
-    display: grid;
-    grid-template-columns: repeat(1fr, 3);
-    grid-template-rows: repeat(1fr, 4);
-    gap: 0px 0px;
-    grid-template-areas: 
-        "left right"
-    ;
-}
-
-#giovanniscarpellino-cv .container .left{
-    position: relative;
-    grid-area: left;
-    padding: 20px 40px;
-    width: 7cm;
-}
-
-#giovanniscarpellino-cv .container .left::after{
-    content: '';
-    height: 90%;
-    width: 1px;
-    position: absolute;
-    right: 0;
-    top: 5%;
-    background-color: var(--divider);
-}
-
-#giovanniscarpellino-cv .container .right{
-    grid-area: right;
-    padding: 20px 40px;
-}
-
-#giovanniscarpellino-cv .experiences ul.content img{
-    height: 15px;
-    width: 15px;
-}
-
-#giovanniscarpellino-cv .experiences ul.content > li{
-    margin-bottom: 10px;
-}
-
-#giovanniscarpellino-cv .experiences ul li{
+.experiences ul {
     list-style: none;
-    margin-left: 0px;
-    margin-bottom: 5px;
+    padding: 0;
 }
 
-#giovanniscarpellino-cv .experiences ul li ul li{
-    list-style: none;
-    margin-left: 0px;
+.experiences ul li {
+    margin-bottom: 1rem;
 }
 
-#giovanniscarpellino-cv .experiences ul li ul li ul li{
-    list-style: none;
-    margin-left: 10px;
+.experiences ul li ul li {
+    margin-left: 1.5rem;
+    padding-left: 1rem;
+    border-left: 1px dashed var(--divider-color);
 }
 
-#giovanniscarpellino-cv .experiences ul li ul li ul li::before{
-    content: "→";
+.experiences img {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        border-bottom: 1px solid var(--divider-color);
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #app {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    header {
+        padding: 2rem 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
 }

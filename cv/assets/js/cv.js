@@ -1,5 +1,5 @@
 let now = new Date();
-let age = 2022 - 1997;
+let age = now.getFullYear() - 1997;
 
 if((now.getMonth() <= 5) || (now.getMonth() <= 5 && now.getDate() < 19))
     age--;
