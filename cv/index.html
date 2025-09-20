@@ -78,76 +78,10 @@
                 <div>
                     <h2>{{ $t('skills') }}</h2>
                     <div class="skills">
-                        <div class="skill">
-                            <span>Git</span>
+                        <div class="skill" v-for="skill in sortedSkills">
+                            <span>{{ skill.name }}</span>
                             <div class="circles">
-                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>NodeJS</span>
-                            <div class="circles">
-                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Javascript</span>
-                            <div class="circles">
-                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>VueJS</span>
-                            <div class="circles">
-                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Java</span>
-                            <div class="circles">
-                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>C#</span>
-                            <div class="circles">
-                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>PostgreSQL</span>
-                            <div class="circles">
-                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>MySQL</span>
-                            <div class="circles">
-                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Flutter</span>
-                            <div class="circles">
-                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span><span class="circle"></span>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>PHP</span>
-                            <div class="circles">
-                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span><span class="circle"></span>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Android</span>
-                            <div class="circles">
-                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span><span class="circle"></span>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Python</span>
-                            <div class="circles">
-                                <span class="circle active"></span><span class="circle active"></span><span class="circle active"></span><span class="circle"></span><span class="circle"></span>
+                                <span v-for="n in 5" class="circle" :class="{ active: n <= skill.level }"></span>
                             </div>
                         </div>
                     </div>
@@ -159,7 +93,7 @@
                     <h2>{{ $t('experiences') }}</h2>
                     <ul class="content">
                         <li>
-                            <h3>Reymann / Sprey, Illkirch, France <small>(2019 - 2025)</small></h3>
+                            <h3>Reymann / Sprey, Illkirch, France <small>({{$t('june')}} 2019 - {{$t('september')}} 2025)</small></h3>
                             <ul>
                                 <li>
                                     {{ $t('collaborative_plateform') }}
@@ -192,7 +126,7 @@
                         </li>
 
                         <li>
-                            <h3>{{ $t('self-employed') }}, Lingolsheim, France <small>(2019+)</small></h3>
+                            <h3>{{ $t('self-employed') }}, Lingolsheim, France <small>({{ $t('december') }} 2019+)</small></h3>
                             <ul>
                                 <li>
                                     Havas Voyage
@@ -216,7 +150,7 @@
                         </li>
 
                         <li>
-                            <h3>Syncodeo association, Haywards Heath, {{ $t('england') }} <small>( {{ $t('october') }} 2018 - {{ $t('march') }} 2019 )</small></h3>
+                            <h3>Syncodeo association, Haywards Heath, {{ $t('england') }} <small>({{ $t('october') }} 2018 - {{ $t('march') }} 2019)</small></h3>
                             <ul>
                                 <li>
                                     Syncodeo
@@ -231,7 +165,7 @@
                         </li>
 
                         <li>
-                            <h3>CEGEP Matane, Matane, Canada <small>( {{ $t('august') }} - {{ $t('december') }} 2017 )</small></h3>
+                            <h3>CEGEP Matane, Matane, Canada <small>({{ $t('august') }} 2017 - {{ $t('december') }} 2017)</small></h3>
                             <ul>
                                 <li>
                                     Gamejam 48H

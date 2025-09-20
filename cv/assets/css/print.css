@@ -1,13 +1,13 @@
 @media print {
     :root {
         /* Sizing variables */
-        --base-font-size: 9.5pt;
-        --line-height: 1.35;
-        --h1-font-size: 1.6rem;
-        --h2-font-size: 1.1rem;
-        --h3-font-size: 1rem;
-        --small-font-size: 8pt;
-        --page-margin: 1cm;
+        --base-font-size: 10.5pt;
+        --line-height: 1.4;
+        --h1-font-size: 1.8rem;
+        --h2-font-size: 1.2rem;
+        --h3-font-size: 1.1rem;
+        --small-font-size: 9pt;
+        --page-padding: 1cm; /* Add padding around the content */
         --container-gap: 1cm;
         --header-padding: 0.5rem;
     }
@@ -19,7 +19,7 @@
 
     @page {
         size: A4;
-        margin: var(--page-margin);
+        margin: 0; /* Remove browser default margins */
     }
 
     body, #app {
@@ -32,11 +32,13 @@
     #app {
         box-shadow: none;
         border-radius: 0;
-        height: calc(297mm - (var(--page-margin) * 2));
-        width: calc(210mm - (var(--page-margin) * 2));
+        height: 297mm;
+        width: 210mm;
         overflow: hidden;
         display: flex;
         flex-direction: column;
+        padding: var(--page-padding);
+        box-sizing: border-box; /* Ensure padding is included in the height/width */
     }
 
     #languages {
@@ -60,8 +62,8 @@
     }
 
     header .title img {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
         border-width: 2px;
     }
 
@@ -71,7 +73,7 @@
     }
 
     header .sub-title {
-        font-size: 0.9rem;
+        font-size: 1rem;
         margin: 0;
     }
     
@@ -79,7 +81,7 @@
         display: grid;
         grid-template-columns: 1fr 2.5fr;
         gap: var(--container-gap);
-        padding: 0.5cm;
+        padding: 0.5cm 0;
         flex-grow: 1;
         overflow: hidden;
     }

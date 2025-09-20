@@ -124,5 +124,22 @@ var app = new Vue({
     i18n,
     data: {
         age: age,
+        skills: [
+            { name: 'Git', level: 5 },
+            { name: 'NodeJS', level: 5 },
+            { name: 'VueJS', level: 5 },
+            { name: 'React/React native', level: 5 },
+            { name: 'PostgreSQL', level: 5 },
+            { name: 'Java', level: 3 },
+            { name: 'C#', level: 3 },
+            { name: 'MySQL', level: 4 },
+            { name: 'Android', level: 3 },
+            { name: 'Python', level: 3 },
+        ]
+    },
+    computed: {
+        sortedSkills() {
+            return [...this.skills].sort((a, b) => b.level - a.level);
+        }
     }
 });
