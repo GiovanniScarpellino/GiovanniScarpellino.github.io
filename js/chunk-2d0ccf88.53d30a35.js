@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0ccf88"],{"4fcc":function(e,r,t){"use strict";t.r(r),r["default"]='Go go resto est un projet réalisé avec 4 autres personnes durant le DUT Informatique de Belfort. Le but ? Trouver les meilleurs restaurants à proximité de l\'utilisateur grâce à une application.\r\n\r\n<img src="/img/gogoresto/image5.png" alt="image1" width="50%">'}}]);
+//# sourceMappingURL=chunk-2d0ccf88.53d30a35.js.map
