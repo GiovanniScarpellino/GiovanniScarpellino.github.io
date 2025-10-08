@@ -128,6 +128,8 @@ var app = new Vue({
             { name: 'Git', level: 5 },
             { name: 'NodeJS', level: 5 },
             { name: 'VueJS', level: 5 },
+            { name: 'Php', level: 5 },
+            { name: 'Symfony', level: 5 },
             { name: 'React/React native', level: 5 },
             { name: 'PostgreSQL', level: 5 },
             { name: 'Java', level: 3 },
