@@ -14,19 +14,19 @@ var app = new Vue({
                 date: "Juin 2019 - Septembre 2025",
                 projects: [{
                     label: "Hub de Communication (Graal)",
-                    description: "Développement d'une application web pour centraliser et gérer les communications sortantes (Courrier, Email, SMS). Mise en place de l'intégration et du déploiement continus.",
+                    description: "Développement d'une application web pour <b>centraliser et gérer les communications sortantes</b> (Courrier, Email, SMS). Mise en place de l'<b>intégration et du déploiement continus</b>.",
                     techs: ["Symfony", "PHP", "MySQL", "RabbitMQ", "Docker", "GitLab CI", "Deployer"]
                 }, {
                     label: "PIM (Product Information Management)",
-                    description: "Création d'un PIM flexible et modulaire pour centraliser les informations produit. Conception de l'architecture pour un déploiement simplifié et scalable.",
+                    description: "Création d'un PIM <b>flexible et modulaire</b> pour <b>centraliser les informations produit</b>. <b>Conception de l'architecture</b> pour un déploiement simplifié et scalable.",
                     techs: ["TypeScript", "PostgreSQL", "Redis", "Elasticsearch", "Docker"]
                 }, {
                     label: "Plateforme collaborative",
-                    description: "Conception et développement d'une application web collaborative pour la production de catalogues. Mise en place d'automatisations complexes avec InDesign Server et gestion de l'infrastructure auto-hébergée, renforçant mon expertise en DevOps.",
+                    description: "Conception et développement d'une <b>application web collaborative</b> pour la production de catalogues. Mise en place d'<b>automatisations complexes</b> avec InDesign Server et <b>gestion de l'infrastructure auto-hébergée</b>, renforçant mon expertise en <b>DevOps</b>.",
                     techs: ["AngularJS", "NodeJS", "Postgresql", "InDesign Server"]
                 }, {
                     label: "Preppy Sport",
-                    description: "Développement d'une marketplace mobile C2C pour articles de sport. Intégration avec un backend externe (Origami) et un CMS (Strapi).",
+                    description: "Développement d'une <b>marketplace mobile C2C</b> pour articles de sport. <b>Intégration avec un backend externe</b> (Origami) et un <b>CMS</b> (Strapi).",
                     techs: ["React Native", "Expo", "Strapi", "OneSignal"]
                 }]
             },
@@ -35,11 +35,11 @@ var app = new Vue({
                 date: "Décembre 2019+",
                 projects: [{
                     label: "Havas Voyages",
-                    description: "Plateforme web pour trouver des spécialistes du voyage. Moteur de recherche et formulaires de contact.",
+                    description: "Plateforme web pour trouver des spécialistes du voyage. <b>Moteur de recherche</b> et formulaires de contact.",
                     techs: ["WordPress", "PHP", "JavaScript", "SCSS"]
                 }, {
                     label: "Zestfully",
-                    description: "Guide gastronomique intelligent avec recherche avancée et recommandations.",
+                    description: "<b>Guide gastronomique intelligent</b> avec <b>recherche avancée</b> et <b>recommandations</b>.",
                     techs: ["NuxtJS", "PostgreSQL", "Elasticsearch"]
                 }]
             },
@@ -48,7 +48,7 @@ var app = new Vue({
                 date: "Octobre 2018 - Mars 2019",
                 projects: [{
                     label: "Syncodeo",
-                    description: "Plateforme d'e-learning synchronisant vidéo et éditeur de code. Déploiement sur Google Cloud Platform et mise en place du monitoring.",
+                    description: "<b>Plateforme d'e-learning</b> synchronisant vidéo et éditeur de code. <b>Déploiement sur Google Cloud Platform</b> et <b>mise en place du monitoring</b>.",
                     techs: ["React", "Hapi", "MySQL", "Elasticsearch", "Redis", "Google Cloud", "Grafana", "Prometheus"]
                 }]
             }

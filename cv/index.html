@@ -28,11 +28,10 @@
             <div class="left">
                 <div class="item">
                     <h2> Profil </h2>
-                    <p>Développeur passionné avec une forte appétence pour le DevOps. J'aime concevoir des architectures scalables, automatiser les déploiements et garantir la stabilité des systèmes. Autodidacte et curieux, je suis toujours à la recherche de nouveaux défis techniques.</p>
+                    <p>Développeur passionné avec une forte appétence pour le DevOps. J'aime concevoir des architectures scalables, automatiser les déploiements et garantir la stabilité des systèmes. Autodidacte et curieux, je suis toujours à la recherche de nouveaux défis.</p>
                 </div>
 
                 <div class="contacts">
-                    <h2>Contact</h2>
                     <div class="item">
                         <img src="./assets/images/phone-solid.svg" alt="Phone">
                         <a href="tel:+33777059145">07 77 05 91 45</a>
@@ -47,7 +46,11 @@
                     </div>
                     <div class="item">
                         <img src="./assets/images/location-pin-solid.svg" alt="Address">
-                        <span>2 Rue Maria Callas, 67380 Lingolsheim, France</span>
+                        <span>Lingolsheim</span>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/images/car.png" alt="permis">
+                        <span>Permis B</span>
                     </div>
                 </div>
 
@@ -57,7 +60,7 @@
                         <h3>DUT Informatique</h3>
                         <p>
                             Belfort, France, 2016-2018 <br>
-                            Matane, Canada, août - décembre 2017
+                            Canada, août - décembre 2017
                         </p>
                     </div>
                 </div>
@@ -94,7 +97,7 @@
                                     {{ project.label }}
                                     <ul>
                                         <li>
-                                            {{ project.description }} <br>
+                                            <span v-html="project.description"></span> <br>
                                             <img src="./assets/images/gear-solid.svg"> {{ project.techs.join(' + ') }}
                                         </li>
                                     </ul>
