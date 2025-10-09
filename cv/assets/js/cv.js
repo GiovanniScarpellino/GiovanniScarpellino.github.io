@@ -132,6 +132,8 @@ var app = new Vue({
             { name: 'PostgreSQL', level: 5 },
             { name: 'PHP', level: 4 },
             { name: 'Symfony', level: 4 },
+            { name: 'Docker', level: 4 },
+            { name: 'Linux', level: 4 },
             { name: 'Java', level: 3 },
             { name: 'C#', level: 3 },
             { name: 'MySQL', level: 4 },
