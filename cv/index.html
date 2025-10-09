@@ -15,16 +15,11 @@
 <body>
     <div id="app">
         <header>
-            <div id="languages">
-                <span>{{ $i18n.locale === 'en-US' ? 'Language' : 'Langue' }}</span>
-                <img src="assets/images/france.png" v-if="$i18n.locale === 'en-US'" @click="$i18n.locale = 'fr-FR'" alt="France">
-                <img src="assets/images/english.png" v-if="$i18n.locale === 'fr-FR'" @click="$i18n.locale = 'en-US'" alt="English">
-            </div>
             <div class="title">
                 <img src="./assets/images/gio.png" alt="Giovanni SCARPELLINO">
                 <div>
                     <h1>Giovanni SCARPELLINO</h1>
-                    <span class="sub-title">{{ $t('developper') }} - {{ age }} {{ $t('years') }}</span>
+                    <span class="sub-title">DevOps - {{ age }} ans</span>
                 </div>
             </div>
         </header>
@@ -32,8 +27,9 @@
         <div class="container">
             <div class="left">
                 <div class="item">
-                    <h2>{{ $t('title_profile') }}</h2>
-                    <p>{{ $t('profile') }}</p>
+                    <h2> Profil </h2>
+                    <p>Développeur informatique motivé, polyvalent et autodidacte. La découverte et l'innovation me
+                        passionnent. J'aime relever des défis et répondre aux problématiques de demain.</p>
                 </div>
 
                 <div class="contacts">
@@ -57,26 +53,26 @@
                 </div>
 
                 <div>
-                    <h2>{{ $t('education') }}</h2>
+                    <h2>Formations</h2>
                     <div>
                         <h3>DUT Informatique</h3>
                         <p>
                             Belfort, France, 2016-2018 <br>
-                            Matane, Canada, {{ $t('august') }} - {{ $t('december') }} 2017
+                            Matane, Canada, août - décembre 2017
                         </p>
                     </div>
                 </div>
 
                 <div>
-                    <h2>{{ $t('languages') }}</h2>
+                    <h2>Langues</h2>
                     <ul class="languages">
-                        <li><strong>{{ $t('french') }}:</strong> {{ $t('native') }}</li>
-                        <li><strong>{{ $t('english') }}:</strong> {{ $t('upper_intermediate') }}</li>
+                        <li><strong>Français:</strong> Natif </li>
+                        <li><strong>Anglais:</strong> C1 </li>
                     </ul>
                 </div>
 
                 <div>
-                    <h2>{{ $t('skills') }}</h2>
+                    <h2>Compétences</h2>
                     <div class="skills">
                         <div class="skill" v-for="skill in sortedSkills">
                             <span>{{ skill.name }}</span>
@@ -90,89 +86,17 @@
 
             <div class="right">
                 <div class="experiences">
-                    <h2>{{ $t('experiences') }}</h2>
+                    <h2>EXPERIENCES</h2>
                     <ul class="content">
-                        <li>
-                            <h3>Reymann / Sprey, Illkirch, France <small>({{$t('june')}} 2019 - {{$t('september')}} 2025)</small></h3>
+                        <li v-for="(experience, index) of experiences" :key="`experience-${index}`">
+                            <h3> {{ experience.society }} <small>{{ experience.date }} </small></h3>
                             <ul>
-                                <li>
-                                    {{ $t('collaborative_plateform') }}
+                                <li v-for="(project, index) of experience.projects" :key="`project-${index}`">
+                                    {{ project.label }}
                                     <ul>
                                         <li>
-                                            {{ $t('plateform') }} <br>
-                                            <img src="./assets/images/gear-solid.svg"> AngularJS + NodeJS + Postgresql
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Electron App
-                                    <ul>
-                                        <li>
-                                            {{ $t('desktop') }} <br>
-                                            <img src="./assets/images/gear-solid.svg"> NodeJS + TypeScript + VueJS
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Discord Bot
-                                    <ul>
-                                        <li>
-                                            {{ $t('discord') }} <br>
-                                            <img src="./assets/images/gear-solid.svg"> NodeJS
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <h3>{{ $t('self-employed') }}, Lingolsheim, France <small>({{ $t('december') }} 2019+)</small></h3>
-                            <ul>
-                                <li>
-                                    Havas Voyage
-                                    <ul>
-                                        <li>
-                                            {{ $t('havas') }} <br>
-                                            <img src="./assets/images/gear-solid.svg"> Wordpress + HTML + Javascript + SCSS
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Zestfully.co
-                                    <ul>
-                                        <li>
-                                            {{ $t('zestfully') }} <br>
-                                            <img src="./assets/images/gear-solid.svg"> NuxtJS + NodeJS + Postgresql + Elasticsearch
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <h3>Syncodeo association, Haywards Heath, {{ $t('england') }} <small>({{ $t('october') }} 2018 - {{ $t('march') }} 2019)</small></h3>
-                            <ul>
-                                <li>
-                                    Syncodeo
-                                    <ul>
-                                        <li>
-                                            {{ $t('syncodeo') }} <br>
-                                            <img src="./assets/images/gear-solid.svg"> React + Express + Postgresql + Elasticsearch
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <h3>CEGEP Matane, Matane, Canada <small>({{ $t('august') }} 2017 - {{ $t('december') }} 2017)</small></h3>
-                            <ul>
-                                <li>
-                                    Gamejam 48H
-                                    <ul>
-                                        <li>
-                                            {{ $t('unity') }} <br>
-                                            <img src="./assets/images/gear-solid.svg"> C# + Unity
+                                            {{ project.description }} <br>
+                                            <img src="./assets/images/gear-solid.svg"> {{ project.techs.join(' + ') }}
                                         </li>
                                     </ul>
                                 </li>
@@ -185,7 +109,6 @@
     </div>
 
     <script src="assets/js/vue.min.js"></script>
-    <script src="assets/js/vue-i18n.js"></script>
     <script src="assets/js/cv.js"></script>
 
 </body>
