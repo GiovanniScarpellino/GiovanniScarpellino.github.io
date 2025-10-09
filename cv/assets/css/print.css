@@ -1,16 +1,17 @@
 @media print {
     :root {
         /* Sizing variables */
-        --base-font-size: 11pt;
+        --base-font-size: 10pt;
         --line-height: 1.4;
         --h1-font-size: 1.8rem;
         --h2-font-size: 1.2rem;
         --h3-font-size: 1.1rem;
         --small-font-size: 9pt;
         --page-padding: 0cm;
-        --container-gap: 0.5cm;
+        --container-gap: 0cm;
         --header-padding: 2rem;
         --page-margin: 0.3cm;
+        --margin-bottom-header: 0.4cm;
     }
 
     body {
@@ -85,7 +86,7 @@
         display: grid;
         grid-template-columns: 1fr 2.5fr;
         gap: var(--container-gap);
-        padding: 0.5cm 0;
+        padding: var(--margin-bottom-header) 0px;
         flex-grow: 1;
         overflow: visible;
     }
