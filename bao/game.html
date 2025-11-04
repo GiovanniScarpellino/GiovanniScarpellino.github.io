@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expandia</title>
-  <script type="module" crossorigin src="https://scarpellino.fr/bao/assets/game-C-w6Md-z.js"></script>
-  <link rel="stylesheet" crossorigin href="https://scarpellino.fr/bao/assets/game-Bws5934i.css">
+  <script type="module" crossorigin src="https://scarpellino.fr/bao/assets/game-C647eJL8.js"></script>
+  <link rel="stylesheet" crossorigin href="https://scarpellino.fr/bao/assets/game-CtPesB5o.css">
 </head>
 <body>
     <div id="loading-screen" class="fullscreen-overlay">
@@ -14,18 +14,18 @@
     </div>
 
     <div id="hud">
+        <div id="minimap-container">
+            <canvas id="minimap" width="200" height="200"></canvas>
+            <p id="minimap-hint">Appuie sur M pour afficher en grand</p>
+        </div>
         <div id="resource-stats" class="hud-panel">
+            <div>Score: <span id="score-value">0</span></div>
             <div id="wood-counter">Bois: 0</div>
             <div id="stone-counter">Pierre: 0</div>
             <div id="gold-counter">Or: 0</div>
         </div>
 
-        <div id="objective-display" class="hud-panel">
-            <span id="objective-text">Objectif: 0/5 fragments</span>
-        </div>
-
         <div id="wave-stats" class="hud-panel">
-            <div id="wave-counter">Manche: 1</div>
             <div id="enemy-counter">Ennemis: 10</div>
         </div>
 
@@ -40,13 +40,32 @@
             </div>
         </div>
 
+        <div id="permanent-player-stats" class="hud-panel">
+            <div>Vitesse d'Attaque: <span id="perm-attack-speed">2.00/s</span></div>
+            <div>Vitesse Projectiles: <span id="perm-proj-speed">1.00x</span></div>
+            <div>Dégâts: <span id="perm-damage">10</span></div>
+            <div>Nb. Projectiles: <span id="perm-proj-count">1</span></div>
+            <div>Taille Projectiles: <span id="perm-proj-size">1.00x</span></div>
+            <div>Mult. Combat: <span id="perm-combat-mult">1.0x</span></div>
+            <div>Mult. Exploration: <span id="perm-explo-mult">1.0x</span></div>
+        </div>
+
         <a href="#" id="help-link">?</a>
+        <div id="chick-pause-controls">
+            <button id="pause-lumberjack-button">Pause Bûcherons</button>
+            <button id="pause-miner-button">Pause Mineurs</button>
+            <button id="pause-explorer-button">Pause Explorateurs</button>
+        </div>
+    </div>
+
+    <div id="large-map-container" class="fullscreen-overlay" style="display: none;">
+        <canvas id="large-map" width="800" height="800"></canvas>
     </div>
 
     <div id="game-over-screen" class="fullscreen-overlay" style="display: none;">
         <div class="overlay-content">
             <h1>GAME OVER</h1>
-            <p>Le cœur a été détruit. Votre progression a été réinitialisée.</p>
+            <p>La base a été détruite. Votre progression a été réinitialisée.</p>
             <button onclick="window.location.reload()">Recommencer</button>
         </div>
     </div>
@@ -62,6 +81,7 @@
         <div class="overlay-content">
             <h1>NIVEAU SUPÉRIEUR !</h1>
             <p>Choisissez une amélioration pour continuer.</p>
+            <div id="player-stats-container"></div>
             <div id="upgrade-cards-container"></div>
         </div>
     </div>
