@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expandia</title>
-  <script type="module" crossorigin src="https://scarpellino.fr/bao/assets/game-DlwXpkT8.js"></script>
-  <link rel="stylesheet" crossorigin href="https://scarpellino.fr/bao/assets/game-CtPesB5o.css">
+  <script type="module" crossorigin src="https://scarpellino.fr/bao/assets/game-BbJCEorA.js"></script>
+  <link rel="stylesheet" crossorigin href="https://scarpellino.fr/bao/assets/game-DJy1zAX7.css">
 </head>
 <body>
     <div id="loading-screen" class="fullscreen-overlay">
@@ -41,8 +41,10 @@
         </div>
 
         <div id="permanent-player-stats" class="hud-panel">
+            <div>PV: <span id="perm-health">100</span> / <span id="perm-max-health">100</span></div>
             <div>Vitesse d'Attaque: <span id="perm-attack-speed">2.00/s</span></div>
             <div>Vitesse Projectiles: <span id="perm-proj-speed">1.00x</span></div>
+            <div>Vitesse de Déplacement: <span id="perm-walk-speed">5.00</span></div>
             <div>Dégâts: <span id="perm-damage">10</span></div>
             <div>Nb. Projectiles: <span id="perm-proj-count">1</span></div>
             <div>Taille Projectiles: <span id="perm-proj-size">1.00x</span></div>
@@ -82,7 +84,6 @@
         <div class="overlay-content">
             <h1>NIVEAU SUPÉRIEUR !</h1>
             <p>Choisissez une amélioration pour continuer.</p>
-            <div id="player-stats-container"></div>
             <div id="upgrade-cards-container"></div>
         </div>
     </div>
