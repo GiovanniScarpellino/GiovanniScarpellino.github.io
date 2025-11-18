@@ -268,3 +268,43 @@ a:hover {
         padding: 1rem;
     }
 }
+
+.admin-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
+}
+
+.admin-menu img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.admin-menu ul {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: white;
+    border: 1px solid var(--divider-color);
+    border-radius: 5px;
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.admin-menu li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.admin-menu li:hover {
+    background-color: var(--background-color);
+}
+

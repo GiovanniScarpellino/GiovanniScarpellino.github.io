@@ -14,12 +14,19 @@
 
 <body>
     <div id="app">
+        <div class="admin-menu">
+            <img src="./assets/images/gear-solid.svg" alt="Admin Menu" @click="isRoleSelectorVisible = !isRoleSelectorVisible">
+            <ul v-if="isRoleSelectorVisible">
+                <li @click="changeRole('devops')">DevOps</li>
+                <li @click="changeRole('fullstack')">Full Stack</li>
+            </ul>
+        </div>
         <header>
             <div class="title">
                 <img src="./assets/images/gio.png" alt="Giovanni SCARPELLINO">
                 <div>
                     <h1>Giovanni SCARPELLINO</h1>
-                    <span class="sub-title">DevOps - {{ age }} ans</span>
+                    <span class="sub-title">{{ currentCvData.title }} - {{ age }} ans</span>
                 </div>
             </div>
         </header>
@@ -28,7 +35,7 @@
             <div class="left">
                 <div class="item">
                     <h2> Profil </h2>
-                    <p>Développeur passionné avec une forte appétence pour le DevOps. J'aime concevoir des architectures scalables, automatiser les déploiements et garantir la stabilité des systèmes. Autodidacte et curieux, je suis toujours à la recherche de nouveaux défis.</p>
+                    <p>{{ currentCvData.profile }}</p>
                 </div>
 
                 <div class="contacts">
@@ -90,7 +97,7 @@
                 <div class="experiences">
                     <h2>EXPERIENCES</h2>
                     <ul class="content">
-                        <li v-for="(experience, index) of experiences" :key="`experience-${index}`">
+                        <li v-for="(experience, index) of currentCvData.experiences" :key="`experience-${index}`">
                             <h3> {{ experience.society }} <small>{{ experience.date }} </small></h3>
                             <ul>
                                 <li v-for="(project, index) of experience.projects" :key="`project-${index}`">

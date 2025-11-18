@@ -147,9 +147,15 @@
     }
 
     .experiences .content > li::before {
+        content: '';
+        position: absolute;
+        left: -5px;
+        top: 0;
         width: 8px;
         height: 8px;
-        left: -5px;
+        border-radius: 50%;
+        background-color: var(--secondary-color);
+        border: 2px solid var(--container-bg-color);
     }
 
     .experiences h3 {
@@ -167,6 +173,11 @@
 
     .experiences ul li ul li ul li {
         margin-top: 0.05cm;
+    }
+
+    /* Hide admin menu when printing */
+    .admin-menu {
+        display: none;
     }
 
     * {
