@@ -26,7 +26,7 @@ var app = new Vue({
                         }, {
                             label: "PIM (Product Information Management)",
                             description: "Création d'un PIM <b>flexible et modulaire</b> pour <b>centraliser les informations produit</b>. <b>Conception de l'architecture</b> pour un déploiement simplifié et scalable.",
-                            techs: ["TypeScript", "PostgreSQL", "Redis", "Elasticsearch", "Docker"]
+                            techs: ["TypeScript", "PostgreSQL", "Redis", "Elasticsearch", "Docker", "VueJS"]
                         }, {
                             label: "Plateforme collaborative",
                             description: "Conception et développement d'une <b>application web collaborative</b> pour la production de catalogues. Mise en place d'<b>automatisations complexes</b> avec InDesign Server et <b>gestion de l'infrastructure auto-hébergée</b>, renforçant mon expertise en <b>DevOps</b>.",
@@ -95,7 +95,7 @@ var app = new Vue({
                         }, {
                             label: "PIM (Product Information Management)",
                             description: "Création d'un PIM <b>flexible et modulaire</b> pour <b>centraliser les informations produit</b>. <b>Conception de l'architecture</b> pour un déploiement simplifié et scalable.",
-                            techs: ["TypeScript", "PostgreSQL", "Redis", "Elasticsearch", "Docker"]
+                            techs: ["TypeScript", "PostgreSQL", "Redis", "Elasticsearch", "Docker", "VueJS"]
                         }, {
                             label: "Plateforme collaborative",
                             description: "Conception et développement d'une <b>application web collaborative</b> pour la production de catalogues. Mise en place d'<b>automatisations complexes</b> avec InDesign Server et <b>gestion de l'infrastructure auto-hébergée</b>, renforçant mon expertise en <b>DevOps</b>.",
@@ -134,7 +134,7 @@ var app = new Vue({
                     { name: 'Docker', level: 5 },
                     { name: 'NodeJS', level: 5 },
                     { name: 'VueJS', level: 5 },
-                    { name: 'React', level: 5 },
+                    { name: 'React', level: 4 },
                     { name: 'PostgreSQL', level: 5 },
                     { name: 'MySQL', level: 5 },
                     { name: 'Linux', level: 4 },
