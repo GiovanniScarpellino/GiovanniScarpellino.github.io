@@ -144,6 +144,11 @@ a:hover {
     height: 20px;
 }
 
+.contacts img.qr {
+    width: 30px;
+    height: 30px;
+}
+
 .skills {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
